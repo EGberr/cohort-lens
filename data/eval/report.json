@@ -1,0 +1,766 @@
+{
+  "generated_at": "2026-11-20T21:02:57+00:00",
+  "corpus": {
+    "documents": 65,
+    "chunks": 459
+  },
+  "retrieval": {
+    "n_queries": 200,
+    "modes": {
+      "bm25": {
+        "hit@1": 0.79,
+        "hit@5": 0.98,
+        "mrr@10": 0.851,
+        "section_hit@5": 0.34,
+        "latency_p50_ms": 0.3,
+        "latency_p95_ms": 0.4,
+        "hit@5_by_kind": {
+          "channel": 1.0,
+          "drivers": 0.98,
+          "trend": 1.0,
+          "implications": 0.94
+        }
+      },
+      "dense": {
+        "hit@1": 0.775,
+        "hit@5": 0.925,
+        "mrr@10": 0.84,
+        "section_hit@5": 0.44,
+        "latency_p50_ms": 4.9,
+        "latency_p95_ms": 7.4,
+        "hit@5_by_kind": {
+          "channel": 0.92,
+          "drivers": 0.98,
+          "trend": 0.98,
+          "implications": 0.82
+        }
+      },
+      "hybrid": {
+        "hit@1": 0.885,
+        "hit@5": 0.99,
+        "mrr@10": 0.928,
+        "section_hit@5": 0.48,
+        "latency_p50_ms": 5.4,
+        "latency_p95_ms": 9.0,
+        "hit@5_by_kind": {
+          "channel": 0.98,
+          "drivers": 1.0,
+          "trend": 1.0,
+          "implications": 0.98
+        }
+      },
+      "hybrid_rerank": {
+        "hit@1": 0.87,
+        "hit@5": 0.995,
+        "mrr@10": 0.92,
+        "section_hit@5": 0.565,
+        "latency_p50_ms": 482.0,
+        "latency_p95_ms": 759.8,
+        "hit@5_by_kind": {
+          "channel": 1.0,
+          "drivers": 1.0,
+          "trend": 1.0,
+          "implications": 0.98
+        }
+      }
+    },
+    "examples": [
+      "Where do young consumers usually buy moisturiser?",
+      "What motivates Gen Z to purchase moisturiser and what holds them back?",
+      "Emerging trends: skin-cycling",
+      "How should brands selling serums adapt their marketing for Gen Z?",
+      "Where do young consumers usually buy mascara?",
+      "What motivates Gen Z to purchase mascara and what holds them back?",
+      "Emerging trends: dupe culture",
+      "How should brands selling makeup adapt their marketing for Gen Z?"
+    ]
+  },
+  "answers": {
+    "analyst": "offline",
+    "model": "offline-analyst",
+    "n_questions": 40,
+    "numeric_accuracy": 1.0,
+    "dataset_citation_rate": 1.0,
+    "citation_rate": 1.0,
+    "error_rate": 0.0,
+    "latency_p50_s": 2.0,
+    "tokens": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_input_tokens": 0
+    },
+    "items": [
+      {
+        "question": "What share of Gen Z bought smartphones in the last 12 months?",
+        "gold": 41.8,
+        "unit": "%",
+        "category": "smartphones",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Smartphones: 42%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- - Penetration (bought in last 12 months): 42% - Average monthly spend among buyers: €44 - Annualised spend per Gen Z consumer: €222 - Spend growth vs 2025 wave: +0.8% - Buyers in panel: 2,507 of 6,000 respondents [S1]\n- *Also covers: phones, mobile phones, iPhone, Android phones. Sector: Tech & Electronics.*  42% of Gen Z consumers bought smartphones in the last twelve months, spending an average of €44 per month. [S2]\n- - Travel & Experiences: €414 - Fast Fashion Apparel: €389 - Food Delivery: €360 - Skincare: €330 - Sneakers: €297 - Specialty Coffee: €260 - Buy Now, Pay Later: €241 - Athleisure & Activewear: €237 - Color Cosmetics: €232 - Investing Apps: €226 - Secondhand & Resale Fashion: €224 - Smartphones: €222 [S3]\n\n### So what for marketers\nPromote certified refurbished and trade-in as part of the main range, not an outlet; camera and battery are the decisive specs. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on athleisure & activewear?",
+        "gold": 34.6,
+        "unit": "EUR",
+        "category": "athleisure",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Athleisure & Activewear: €35** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: activewear, leggings, gym clothes, sportswear. Sector: Fashion & Accessories.*  Athleisure & Activewear reached 57% of Gen Z consumers over the last twelve months, spending an average of €35 per month. [S1]\n- - Penetration (bought in last 12 months): 57% - Average monthly spend among buyers: €35 - Annualised spend per Gen Z consumer: €237 - Spend growth vs 2025 wave: +8.8% - Buyers in panel: 3,424 of 6,000 respondents [S2]\n- The category skews towards women: 66% of women bought versus 48% of men. It is an older-Gen Z category: penetration rises from 53% among 16-19 year-olds to 60% among 25-29 year-olds. [S3]\n\n### So what for marketers\nSponsor communities, not just athletes: run clubs and studio partnerships drive both discovery and repeat purchase. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought smart home last year?",
+        "gold": 29.0,
+        "unit": "%",
+        "category": "smart-home",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Smart Home: highest among female (29%), lowest among non-binary (24%)** [D1].\n- female: 29% (n=2,950)\n- male: 27% (n=2,792)\n- non-binary: 24% (n=258)\n\n### What the research says\n- *Also covers: smart speakers, smart lights, home automation, LED strips. Sector: Tech & Electronics.*  Over the past year, 28% of the Gen Z panel purchased smart home, spending an average of €13 per month. [S1]\n- - Penetration (bought in last 12 months): 28% - Average monthly spend among buyers: €13 - Annualised spend per Gen Z consumer: €42 - Spend growth vs 2025 wave: +2.1% - Buyers in panel: 1,672 of 6,000 respondents [S2]\n- Purchase is balanced by gender (women 29%, men 27%). It is an older-Gen Z category: penetration rises from 24% among 16-19 year-olds to 32% among 25-29 year-olds. [S3]\n\n### So what for marketers\nDesign renter-friendly, no-install products and market them as room makeovers rather than automation. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for small kitchen appliances among Gen Z, and what share does it take?",
+        "gold": 47.0,
+        "unit": "%",
+        "category": "small-appliances",
+        "gold_label": "Marketplaces (Amazon, Zalando...)",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Marketplaces (Amazon, Zalando...) leads for Small Kitchen Appliances**, cited by 47% of buyers [D1].\n- Marketplaces (Amazon, Zalando...): 47%\n- Physical store: 31%\n- Brand website / app: 10%\n- TikTok Shop: 10%\n- Resale apps (Vinted, Depop...): 2%\n\n### What the research says\n- Main purchase channel per category: Candles & Home Fragrance — Physical store (49%); Furniture — Physical store (37%); Home Decor — Physical store (33%); Houseplants — Physical store (65%); Small Kitchen Appliances — Marketplaces (Amazon, Zalando...) (47%). [S1]\n- *Also covers: air fryer, blender, coffee machine, kitchen gadgets. Sector: Home & Living.*  Over the past year, 31% of the Gen Z panel purchased small kitchen appliances, spending an average of €17 per month. [S2]\n- - Penetration (bought in last 12 months): 31% - Average monthly spend among buyers: €17 - Annualised spend per Gen Z consumer: €62 - Spend growth vs 2025 wave: +3.3% - Buyers in panel: 1,856 of 6,000 respondents [S3]\n\n### So what for marketers\nSell with recipes: content partnerships and in-app recipe libraries turn an appliance into a habit. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHR"
+      },
+      {
+        "question": "What share of Gen Z bought haircare in the last 12 months?",
+        "gold": 70.7,
+        "unit": "%",
+        "category": "haircare",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Haircare: 71%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: shampoo, hair products, hair oil, conditioner. Sector: Beauty & Personal Care.*  71% of Gen Z consumers bought haircare in the last twelve months, spending an average of €19 per month. [S1]\n- - Penetration (bought in last 12 months): 71% - Average monthly spend among buyers: €19 - Annualised spend per Gen Z consumer: €160 - Spend growth vs 2025 wave: +6.2% - Buyers in panel: 4,241 of 6,000 respondents [S2]\n- The category skews towards women: 79% of women bought versus 61% of men. Penetration is similar across age bands (16-19: 70%, 25-29: 72%). [S3]\n\n### So what for marketers\nSegment the shelf: protect volume on basics with value packs, and build premium, hair-type-specific treatment lines with clear before/after evidence. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on men's grooming?",
+        "gold": 22.0,
+        "unit": "EUR",
+        "category": "mens-grooming",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Men's Grooming: highest among non-binary (€23), lowest among female (€22)** [D1].\n- female: €22 (n=883)\n- male: €22 (n=1,854)\n- non-binary: €23 (n=102)\n\n### What the research says\n- *Also covers: grooming, beard care, men's skincare, razors. Sector: Beauty & Personal Care.*  Over the past year, 47% of the Gen Z panel purchased men's grooming, spending an average of €22 per month. [S1]\n- - Penetration (bought in last 12 months): 47% - Average monthly spend among buyers: €22 - Annualised spend per Gen Z consumer: €125 - Spend growth vs 2025 wave: +11.3% - Buyers in panel: 2,839 of 6,000 respondents [S2]\n- The category skews towards men: 66% of men bought versus 30% of women. It is an older-Gen Z category: penetration rises from 43% among 16-19 year-olds to 52% among 25-29 year-olds. [S3]\n\n### So what for marketers\nSpeak in functional, benefit-first language; partner with fitness and gaming creators; keep routines to three steps or fewer. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought mental wellness apps last year?",
+        "gold": 24.8,
+        "unit": "%",
+        "category": "mental-wellness-apps",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Mental Wellness Apps: highest among female (25%), lowest among male (13%)** [D1].\n- female: 25% (n=2,950)\n- male: 13% (n=2,792)\n- non-binary: 21% (n=258)\n\n### What the research says\n- *Also covers: meditation apps, therapy apps, mental health apps, journaling apps. Sector: Health & Wellness.*  Mental Wellness Apps reached 19% of Gen Z consumers over the last twelve months, spending an average of €12 per month. [S1]\n- The Health & Wellness sector covers 6 categories in this panel: Gym & Fitness Memberships, Supplements, Mental Wellness Apps, Sleep Products, Period Care, Oral Care. The most widely bought is Oral Care (56% penetration), while Mental Wellness Apps is the most niche (19%). [S2]\n- - Penetration (bought in last 12 months): 19% - Average monthly spend among buyers: €12 - Annualised spend per Gen Z consumer: €27 - Spend growth vs 2025 wave: +6.8% - Buyers in panel: 1,153 of 6,000 respondents [S3]\n\n### So what for marketers\nOptimise for week-one habit formation and consider employer/university partnerships to remove the price barrier. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for fast fashion apparel among Gen Z, and what share does it take?",
+        "gold": 28.9,
+        "unit": "%",
+        "category": "fast-fashion",
+        "gold_label": "Marketplaces (Amazon, Zalando...)",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Marketplaces (Amazon, Zalando...) leads for Fast Fashion Apparel**, cited by 29% of buyers [D1].\n- Marketplaces (Amazon, Zalando...): 29%\n- Brand website / app: 27%\n- Physical store: 21%\n- TikTok Shop: 15%\n- Instagram Shopping: 8%\n\n### What the research says\n- Main purchase channel per category: Athleisure & Activewear — Brand website / app (32%); Bags & Accessories — Physical store (30%); Demi-fine Jewelry — Brand website / app (29%); Eyewear — Physical store (46%); Fast Fashion Apparel — Marketplaces (Amazon, Zalando...) (29%); Secondhand & Resale Fashion — Resale apps (Vinted, Depop...) (64%); Sneakers — Brand website / app (30%). [S1]\n- *Also covers: clothing, fast fashion, ultra-fast fashion, apparel. Sector: Fashion & Accessories.*  68% of Gen Z consumers bought fast fashion apparel in the last twelve months, spending an average of €47 per month. [S2]\n- Ranked by annual spend per Gen Z consumer, Travel & Experiences (€414 a year) and Fast Fashion Apparel (€389) take the largest share of wallet. Growth is concentrated in experiences, resale and wellness. [S3]\n\n### So what for marketers\n*Also covers: clothing, fast fashion, ultra-fast fashion, apparel. Sector: Fashion & Acces"
+      },
+      {
+        "question": "What share of Gen Z bought wearables in the last 12 months?",
+        "gold": 29.1,
+        "unit": "%",
+        "category": "wearables",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Wearables: 29%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- - Penetration (bought in last 12 months): 29% - Average monthly spend among buyers: €19 - Annualised spend per Gen Z consumer: €66 - Spend growth vs 2025 wave: +9.7% - Buyers in panel: 1,748 of 6,000 respondents [S1]\n- *Also covers: smartwatch, fitness tracker, smart ring, wearable tech. Sector: Tech & Electronics.*  Over the past year, 29% of the Gen Z panel purchased wearables, spending an average of €19 per month. [S2]\n- Ranked by annual spend per Gen Z consumer, Travel & Experiences (€414 a year) and Fast Fashion Apparel (€389) take the largest share of wallet. Growth is concentrated in experiences, resale and wellness. [S3]\n\n### So what for marketers\nLead with sleep and recovery insights; address data privacy explicitly; subscription models must justify themselves with coaching. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on oral care?",
+        "gold": 10.4,
+        "unit": "EUR",
+        "category": "oral-care",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Oral Care: €10** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: teeth whitening, electric toothbrush, toothpaste, oral care. Sector: Health & Wellness.*  Over the past year, 56% of the Gen Z panel purchased oral care, spending an average of €10 per month. [S1]\n- - Penetration (bought in last 12 months): 56% - Average monthly spend among buyers: €10 - Annualised spend per Gen Z consumer: €69 - Spend growth vs 2025 wave: +5.8% - Buyers in panel: 3,337 of 6,000 respondents [S2]\n- The category skews towards women: 60% of women bought versus 51% of men. It is an older-Gen Z category: penetration rises from 52% among 16-19 year-olds to 60% among 25-29 year-olds. [S3]\n\n### So what for marketers\nUse before/after proof responsibly and highlight enamel safety to differentiate from viral but harsh products. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought micromobility last year?",
+        "gold": 20.4,
+        "unit": "%",
+        "category": "micromobility",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Micromobility: highest among male (36%), lowest among female (20%)** [D1].\n- female: 20% (n=2,950)\n- male: 36% (n=2,792)\n- non-binary: 24% (n=258)\n\n### What the research says\n- The category skews towards men: 36% of men bought versus 20% of women. It is an older-Gen Z category: penetration rises from 25% among 16-19 year-olds to 30% among 25-29 year-olds. [S1]\n- - Penetration (bought in last 12 months): 28% - Average monthly spend among buyers: €16 - Annualised spend per Gen Z consumer: €52 - Spend growth vs 2025 wave: +8.4% - Buyers in panel: 1,670 of 6,000 respondents [S2]\n- *Also covers: e-scooters, e-bikes, bike sharing, scooters. Sector: Mobility & Travel.*  Micromobility reached 28% of Gen Z consumers over the last twelve months, spending an average of €16 per month. [S3]\n\n### So what for marketers\nOffer monthly passes and lead on safety; partner with universities and employers. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for gym & fitness memberships among Gen Z, and what share does it take?",
+        "gold": 73.7,
+        "unit": "%",
+        "category": "gym-fitness",
+        "gold_label": "Subscription",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Subscription leads for Gym & Fitness Memberships**, cited by 74% of buyers [D1].\n- Subscription: 74%\n- Brand website / app: 22%\n- Physical store: 4%\n\n### What the research says\n- Main purchase channel per category: Gym & Fitness Memberships — Subscription (74%); Mental Wellness Apps — Subscription (89%); Oral Care — Physical store (57%); Period Care — Physical store (62%); Sleep Products — Marketplaces (Amazon, Zalando...) (42%); Supplements — Marketplaces (Amazon, Zalando...) (38%). [S1]\n- *Also covers: gym membership, fitness classes, pilates, gyms. Sector: Health & Wellness.*  45% of Gen Z consumers bought gym & fitness memberships in the last twelve months, spending an average of €38 per month. [S2]\n- The top purchase driver is health benefits (41% of buyers cite it first), ahead of community & belonging (29%) and price / value for money (19%). Price is the decisive factor for 57% of buyers, 4 points below the panel average of 61%. [S3]\n\n### So what for marketers\nEither win on price (budget) or on community (boutique); onboarding for beginners reduces 'gymtimidation' churn. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_AP"
+      },
+      {
+        "question": "What share of Gen Z bought energy drinks in the last 12 months?",
+        "gold": 58.4,
+        "unit": "%",
+        "category": "energy-drinks",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Energy Drinks: 58%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: energy drink, caffeine drinks, pre-workout drinks. Sector: Food & Beverage.*  58% of Gen Z consumers bought energy drinks in the last twelve months, spending an average of €18 per month. [S1]\n- - Penetration (bought in last 12 months): 58% - Average monthly spend among buyers: €18 - Annualised spend per Gen Z consumer: €123 - Spend growth vs 2025 wave: +10.6% - Buyers in panel: 3,502 of 6,000 respondents [S2]\n- - **Creator-owned brands** - **Zero-sugar** - **Flavour drops** [S3]\n\n### So what for marketers\nRun frequent limited flavour drops, partner with gaming and streaming creators, and lead with zero-sugar. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on fragrance?",
+        "gold": 27.9,
+        "unit": "EUR",
+        "category": "fragrance",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Fragrance: €28** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: perfume, body mist, cologne, scent. Sector: Beauty & Personal Care.*  Fragrance reached 53% of Gen Z consumers over the last twelve months, spending an average of €28 per month. [S1]\n- - Penetration (bought in last 12 months): 53% - Average monthly spend among buyers: €28 - Annualised spend per Gen Z consumer: €177 - Spend growth vs 2025 wave: +14.8% - Buyers in panel: 3,168 of 6,000 respondents [S2]\n- The category skews towards women: 60% of women bought versus 45% of men. It is an older-Gen Z category: penetration rises from 48% among 16-19 year-olds to 57% among 25-29 year-olds. [S3]\n\n### So what for marketers\nInvest in sampling at scale (discovery kits, minis, in-store scent bars) and give each scent a story that can be explained in a 20-second video. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought nail care last year?",
+        "gold": 55.3,
+        "unit": "%",
+        "category": "nail-care",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Nail Care: highest among female (55%), lowest among male (21%)** [D1].\n- female: 55% (n=2,950)\n- male: 21% (n=2,792)\n- non-binary: 43% (n=258)\n\n### What the research says\n- *Also covers: nails, nail polish, press-on nails, gel nails. Sector: Beauty & Personal Care.*  Over the past year, 39% of the Gen Z panel purchased nail care, spending an average of €15 per month. [S1]\n- The category skews towards women: 55% of women bought versus 21% of men. Penetration is similar across age bands (16-19: 40%, 25-29: 38%). [S2]\n- The Beauty & Personal Care sector covers 6 categories in this panel: Skincare, Color Cosmetics, Fragrance, Haircare, Men's Grooming, Nail Care. The most widely bought is Skincare (78% penetration), while Nail Care is the most niche (39%). [S3]\n\n### So what for marketers\nRun a fast, drop-based design calendar and collaborate with nail artists on limited sets; reusable press-ons are a credible sustainability story. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for video streaming among Gen Z, and what share does it take?",
+        "gold": 89.8,
+        "unit": "%",
+        "category": "video-streaming",
+        "gold_label": "Subscription",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Subscription leads for Video Streaming**, cited by 90% of buyers [D1].\n- Subscription: 90%\n- Brand website / app: 10%\n\n### What the research says\n- Main purchase channel per category: Books — Marketplaces (Amazon, Zalando...) (39%); Collectibles & Trading Cards — Physical store (31%); Live Events & Concerts — Brand website / app (56%); Mobile Gaming (In-app Purchases) — Brand website / app (78%); Music Streaming — Subscription (85%); Video Streaming — Subscription (90%). [S1]\n- *Also covers: Netflix, SVOD, streaming services, TV subscriptions. Sector: Entertainment & Media.*  Over the past year, 72% of the Gen Z panel purchased video streaming, spending an average of €18 per month. [S2]\n- Discovery is led by Friends & family (30% of buyers), followed by TikTok (25%) and YouTube (16%). TikTok accounts for 28% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (12% vs 9.5%). [S3]\n\n### So what for marketers\nPlan for churn: bundles, ad tiers and release schedules designed to retain subscribers between tentpole shows. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure "
+      },
+      {
+        "question": "What share of Gen Z bought music streaming in the last 12 months?",
+        "gold": 73.0,
+        "unit": "%",
+        "category": "music-streaming",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Music Streaming: 73%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: Spotify, music subscriptions, streaming music. Sector: Entertainment & Media.*  Over the past year, 73% of the Gen Z panel purchased music streaming, spending an average of €9 per month. [S1]\n- - Penetration (bought in last 12 months): 73% - Average monthly spend among buyers: €9 - Annualised spend per Gen Z consumer: €82 - Spend growth vs 2025 wave: +2.4% - Buyers in panel: 4,377 of 6,000 respondents [S2]\n- The Entertainment & Media sector covers 6 categories in this panel: Music Streaming, Video Streaming, Mobile Gaming (In-app Purchases), Live Events & Concerts, Books, Collectibles & Trading Cards. The most widely bought is Music Streaming (73% penetration), while Collectibles & Trading Cards is the most niche (24%). [S3]\n\n### So what for marketers\nUse social features (shared playlists, wrapped-style recaps) to defend retention when prices increase. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on ride-hailing?",
+        "gold": 20.2,
+        "unit": "EUR",
+        "category": "ride-hailing",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Ride-hailing: €20** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: Uber, taxis, ride sharing, rides. Sector: Mobility & Travel.*  Over the past year, 53% of the Gen Z panel purchased ride-hailing, spending an average of €20 per month. [S1]\n- - Penetration (bought in last 12 months): 53% - Average monthly spend among buyers: €20 - Annualised spend per Gen Z consumer: €128 - Spend growth vs 2025 wave: +2.7% - Buyers in panel: 3,162 of 6,000 respondents [S2]\n- The category skews towards women: 55% of women bought versus 50% of men. It is an older-Gen Z category: penetration rises from 46% among 16-19 year-olds to 58% among 25-29 year-olds. [S3]\n\n### So what for marketers\nFeature safety tools prominently and offer predictable pricing passes for night-time trips. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought specialty coffee last year?",
+        "gold": 71.0,
+        "unit": "%",
+        "category": "specialty-coffee",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Specialty Coffee: highest among female (71%), lowest among male (60%)** [D1].\n- female: 71% (n=2,950)\n- male: 60% (n=2,792)\n- non-binary: 60% (n=258)\n\n### What the research says\n- *Also covers: coffee, iced coffee, matcha, coffee shops. Sector: Food & Beverage.*  65% of Gen Z consumers bought specialty coffee in the last twelve months, spending an average of €33 per month. [S1]\n- The category skews towards women: 71% of women bought versus 60% of men. It is an older-Gen Z category: penetration rises from 58% among 16-19 year-olds to 70% among 25-29 year-olds. [S2]\n- - Penetration (bought in last 12 months): 65% - Average monthly spend among buyers: €33 - Annualised spend per Gen Z consumer: €260 - Spend growth vs 2025 wave: +7.5% - Buyers in panel: 3,911 of 6,000 respondents [S3]\n\n### So what for marketers\nDesign for the photo (cups, colours, seasonal menus) and use loyalty apps to convert a daily habit into a programme. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for period care among Gen Z, and what share does it take?",
+        "gold": 61.5,
+        "unit": "%",
+        "category": "period-care",
+        "gold_label": "Physical store",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Physical store leads for Period Care**, cited by 62% of buyers [D1].\n- Physical store: 62%\n- Marketplaces (Amazon, Zalando...): 17%\n- Subscription: 12%\n- Brand website / app: 8%\n- TikTok Shop: 2%\n\n### What the research says\n- Main purchase channel per category: Gym & Fitness Memberships — Subscription (74%); Mental Wellness Apps — Subscription (89%); Oral Care — Physical store (57%); Period Care — Physical store (62%); Sleep Products — Marketplaces (Amazon, Zalando...) (42%); Supplements — Marketplaces (Amazon, Zalando...) (38%). [S1]\n- *Also covers: menstrual products, period underwear, menstrual cups, tampons. Sector: Health & Wellness.*  43% of Gen Z consumers bought period care in the last twelve months, spending an average of €9 per month. [S2]\n- - **Period underwear** - **Toxin-free claims** - **Period positivity** [S3]\n\n### So what for marketers\nLower the entry price of reusables with starter kits and use open, educational content to build trust. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What share of Gen Z bought low & no alcohol in the last 12 months?",
+        "gold": 33.9,
+        "unit": "%",
+        "category": "low-no-alcohol",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Low & No Alcohol: 34%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: alcohol-free drinks, non-alcoholic beer, mocktails, sober curious. Sector: Food & Beverage.*  34% of Gen Z consumers bought low & no alcohol in the last twelve months, spending an average of €22 per month. [S1]\n- - Penetration (bought in last 12 months): 34% - Average monthly spend among buyers: €22 - Annualised spend per Gen Z consumer: €90 - Spend growth vs 2025 wave: +18.2% - Buyers in panel: 2,033 of 6,000 respondents [S2]\n- The category skews towards women: 37% of women bought versus 31% of men. It is an older-Gen Z category: penetration rises from 28% among 16-19 year-olds to 40% among 25-29 year-olds. [S3]\n\n### So what for marketers\nPosition NA drinks as premium social rituals (bars, events) and avoid 'healthy' framing that kills the fun. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on candles & home fragrance?",
+        "gold": 12.7,
+        "unit": "EUR",
+        "category": "candles-home-fragrance",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Candles & Home Fragrance: €13** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: candles, diffusers, room spray, home fragrance. Sector: Home & Living.*  Candles & Home Fragrance reached 38% of Gen Z consumers over the last twelve months, spending an average of €13 per month. [S1]\n- - Penetration (bought in last 12 months): 38% - Average monthly spend among buyers: €13 - Annualised spend per Gen Z consumer: €57 - Spend growth vs 2025 wave: +6.7% - Buyers in panel: 2,256 of 6,000 respondents [S2]\n- 1. Home Decor: 47% penetration, €22/month, +4.2% growth 2. [S3]\n\n### So what for marketers\nRun seasonal drops and transparent ingredient claims; offer samplers to solve the online smell problem. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought color cosmetics last year?",
+        "gold": 79.3,
+        "unit": "%",
+        "category": "color-cosmetics",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Color Cosmetics: highest among female (79%), lowest among male (48%)** [D1].\n- female: 79% (n=2,950)\n- male: 48% (n=2,792)\n- non-binary: 76% (n=258)\n\n### What the research says\n- *Also covers: makeup, lipstick, foundation, mascara. Sector: Beauty & Personal Care.*  Over the past year, 65% of the Gen Z panel purchased color cosmetics, spending an average of €30 per month. [S1]\n- The category skews towards women: 79% of women bought versus 48% of men. Penetration is similar across age bands (16-19: 66%, 25-29: 63%). [S2]\n- - Penetration (bought in last 12 months): 65% - Average monthly spend among buyers: €30 - Annualised spend per Gen Z consumer: €232 - Spend growth vs 2025 wave: +4.1% - Buyers in panel: 3,887 of 6,000 respondents [S3]\n\n### So what for marketers\nTreat dupes as a competitive reality: defend prestige lines with performance claims and refill/value sizes, and launch entry price points instead of fighting comparison content. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for supplements among Gen Z, and what share does it take?",
+        "gold": 38.2,
+        "unit": "%",
+        "category": "supplements",
+        "gold_label": "Marketplaces (Amazon, Zalando...)",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Marketplaces (Amazon, Zalando...) leads for Supplements**, cited by 38% of buyers [D1].\n- Marketplaces (Amazon, Zalando...): 38%\n- Physical store: 26%\n- Brand website / app: 15%\n- TikTok Shop: 10%\n- Subscription: 10%\n\n### What the research says\n- Main purchase channel per category: Gym & Fitness Memberships — Subscription (74%); Mental Wellness Apps — Subscription (89%); Oral Care — Physical store (57%); Period Care — Physical store (62%); Sleep Products — Marketplaces (Amazon, Zalando...) (42%); Supplements — Marketplaces (Amazon, Zalando...) (38%). [S1]\n- *Also covers: vitamins, protein powder, creatine, gummies. Sector: Health & Wellness.*  Supplements reached 41% of Gen Z consumers over the last twelve months, spending an average of €26 per month. [S2]\n- Across the sector, health benefits is the most common lead driver (6 of 6 categories). Sleep Products: 'Sleepmaxxing' turned sleep into a routine of products — masks, mouth tape, magnesium drinks — mostly discovered through viral TikTok routines. [S3]\n\n### So what for marketers\nPublish third-party test results and dosage science; avoid miracle claims that invite creator backlash. [S6]\n\n*Offline analyst mode: answer assembled "
+      },
+      {
+        "question": "What share of Gen Z bought food delivery in the last 12 months?",
+        "gold": 65.8,
+        "unit": "%",
+        "category": "food-delivery",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Food Delivery: 66%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: takeaway, food delivery apps, delivery, takeout. Sector: Food & Beverage.*  Food Delivery reached 66% of Gen Z consumers over the last twelve months, spending an average of €46 per month. [S1]\n- - Penetration (bought in last 12 months): 66% - Average monthly spend among buyers: €46 - Annualised spend per Gen Z consumer: €360 - Spend growth vs 2025 wave: +1.9% - Buyers in panel: 3,946 of 6,000 respondents [S2]\n- - Travel & Experiences: €414 - Fast Fashion Apparel: €389 - Food Delivery: €360 - Skincare: €330 - Sneakers: €297 - Specialty Coffee: €260 - Buy Now, Pay Later: €241 - Athleisure & Activewear: €237 - Color Cosmetics: €232 - Investing Apps: €226 - Secondhand & Resale Fashion: €224 - Smartphones: €222 [S3]\n\n### So what for marketers\nMake fees transparent and reward frequency through passes; menus built for sharing videos help virtual brands get discovered. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on houseplants?",
+        "gold": 11.8,
+        "unit": "EUR",
+        "category": "houseplants",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Houseplants: €12** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: plants, indoor plants, plant care. Sector: Home & Living.*  Houseplants reached 23% of Gen Z consumers over the last twelve months, spending an average of €12 per month. [S1]\n- - Penetration (bought in last 12 months): 23% - Average monthly spend among buyers: €12 - Annualised spend per Gen Z consumer: €33 - Spend growth vs 2025 wave: -3.5% - Buyers in panel: 1,391 of 6,000 respondents [S2]\n- The category skews towards women: 30% of women bought versus 16% of men. It is an older-Gen Z category: penetration rises from 19% among 16-19 year-olds to 26% among 25-29 year-olds. [S3]\n\n### So what for marketers\nSell 'hard-to-kill' and plant-care education; rare plants are a niche, not the mainstream. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought secondhand & resale fashion last year?",
+        "gold": 68.1,
+        "unit": "%",
+        "category": "secondhand-fashion",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Secondhand & Resale Fashion: highest among female (68%), lowest among male (48%)** [D1].\n- female: 68% (n=2,950)\n- male: 48% (n=2,792)\n- non-binary: 60% (n=258)\n\n### What the research says\n- *Also covers: resale, vintage, thrift, pre-loved clothing. Sector: Fashion & Accessories.*  58% of Gen Z consumers bought secondhand & resale fashion in the last twelve months, spending an average of €32 per month. [S1]\n- The category skews towards women: 68% of women bought versus 48% of men. It is an older-Gen Z category: penetration rises from 55% among 16-19 year-olds to 61% among 25-29 year-olds. [S2]\n- - Penetration (bought in last 12 months): 58% - Average monthly spend among buyers: €32 - Annualised spend per Gen Z consumer: €224 - Spend growth vs 2025 wave: +21.7% - Buyers in panel: 3,495 of 6,000 respondents [S3]\n\n### So what for marketers\nBuild or partner on branded resale with trade-in credit so the resale loop returns to your store instead of a third-party app. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for online learning among Gen Z, and what share does it take?",
+        "gold": 73.9,
+        "unit": "%",
+        "category": "online-learning",
+        "gold_label": "Subscription",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Subscription leads for Online Learning**, cited by 74% of buyers [D1].\n- Subscription: 74%\n- Brand website / app: 23%\n- Marketplaces (Amazon, Zalando...): 3%\n\n### What the research says\n- Main purchase channel per category: Buy Now, Pay Later — Brand website / app (54%); Investing Apps — Brand website / app (93%); Online Learning — Subscription (74%); Pet Care — Physical store (40%). [S1]\n- *Also covers: language learning, online courses, Duolingo, skills courses. Sector: Money & Services.*  33% of Gen Z consumers bought online learning in the last twelve months, spending an average of €15 per month. [S2]\n- Discovery is led by TikTok (27% of buyers), followed by YouTube (24%) and Search engines (21%). TikTok accounts for 29% of first discoveries among 16-19 year-olds versus 25% among 25-29 year-olds, while search engines matter more for the older group (23% vs 20%). [S3]\n\n### So what for marketers\nLink courses to concrete career outcomes and employer partnerships; streaks and community keep learners engaged. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What share of Gen Z bought gaming hardware in the last 12 months?",
+        "gold": 37.3,
+        "unit": "%",
+        "category": "gaming-hardware",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Gaming Hardware: 37%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: consoles, gaming PC, controllers, gaming peripherals. Sector: Tech & Electronics.*  37% of Gen Z consumers bought gaming hardware in the last twelve months, spending an average of €42 per month. [S1]\n- - Penetration (bought in last 12 months): 37% - Average monthly spend among buyers: €42 - Annualised spend per Gen Z consumer: €187 - Spend growth vs 2025 wave: -1.5% - Buyers in panel: 2,237 of 6,000 respondents [S2]\n- The Tech & Electronics sector covers 6 categories in this panel: Smartphones, Wireless Audio, Gaming Hardware, Wearables, Creator Gear, Smart Home. The most widely bought is Wireless Audio (48% penetration), while Creator Gear is the most niche (20%). [S3]\n\n### So what for marketers\nWin the review ecosystem (YouTube, Twitch) and bundle with game passes to lower the upfront price. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on investing apps?",
+        "gold": 70.1,
+        "unit": "EUR",
+        "category": "investing-apps",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Investing Apps: €70** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: stock trading apps, investing, ETFs, crypto apps. Sector: Money & Services.*  Investing Apps reached 27% of Gen Z consumers over the last twelve months, spending an average of €70 per month. [S1]\n- - Penetration (bought in last 12 months): 27% - Average monthly spend among buyers: €70 - Annualised spend per Gen Z consumer: €226 - Spend growth vs 2025 wave: +10.3% - Buyers in panel: 1,612 of 6,000 respondents [S2]\n- The category skews towards men: 38% of men bought versus 16% of women. It is an older-Gen Z category: penetration rises from 20% among 16-19 year-olds to 33% among 25-29 year-olds. [S3]\n\n### So what for marketers\nEducate rather than hype; transparent fees and long-term ETF plans build trust with first-time investors. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought travel & experiences last year?",
+        "gold": 59.1,
+        "unit": "%",
+        "category": "travel-experiences",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Travel & Experiences: highest among female (59%), lowest among male (52%)** [D1].\n- female: 59% (n=2,950)\n- male: 52% (n=2,792)\n- non-binary: 58% (n=258)\n\n### What the research says\n- *Also covers: travel, holidays, trips, city breaks. Sector: Mobility & Travel.*  56% of Gen Z consumers bought travel & experiences in the last twelve months, spending an average of €62 per month. [S1]\n- The category skews towards women: 59% of women bought versus 52% of men. It is an older-Gen Z category: penetration rises from 47% among 16-19 year-olds to 64% among 25-29 year-olds. [S2]\n- - Penetration (bought in last 12 months): 56% - Average monthly spend among buyers: €62 - Annualised spend per Gen Z consumer: €414 - Spend growth vs 2025 wave: +11.4% - Buyers in panel: 3,350 of 6,000 respondents [S3]\n\n### So what for marketers\nOptimise destination content for TikTok search and market lesser-known 'dupe' destinations on value. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for wireless audio among Gen Z, and what share does it take?",
+        "gold": 37.0,
+        "unit": "%",
+        "category": "wireless-audio",
+        "gold_label": "Marketplaces (Amazon, Zalando...)",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Marketplaces (Amazon, Zalando...) leads for Wireless Audio**, cited by 37% of buyers [D1].\n- Marketplaces (Amazon, Zalando...): 37%\n- Physical store: 27%\n- Brand website / app: 17%\n- TikTok Shop: 11%\n- Resale apps (Vinted, Depop...): 8%\n\n### What the research says\n- Main purchase channel per category: Creator Gear — Marketplaces (Amazon, Zalando...) (51%); Gaming Hardware — Marketplaces (Amazon, Zalando...) (39%); Smart Home — Marketplaces (Amazon, Zalando...) (55%); Smartphones — Physical store (30%); Wearables — Marketplaces (Amazon, Zalando...) (35%); Wireless Audio — Marketplaces (Amazon, Zalando...) (37%). [S1]\n- *Also covers: headphones, earbuds, earphones, speakers. Sector: Tech & Electronics.*  48% of Gen Z consumers bought wireless audio in the last twelve months, spending an average of €15 per month. [S2]\n- The Tech & Electronics sector covers 6 categories in this panel: Smartphones, Wireless Audio, Gaming Hardware, Wearables, Creator Gear, Smart Home. The most widely bought is Wireless Audio (48% penetration), while Creator Gear is the most niche (20%). [S3]\n\n### So what for marketers\nMarket over-ears as fashion (colourways, collaborations) and earbuds on battery life "
+      },
+      {
+        "question": "What share of Gen Z bought eyewear in the last 12 months?",
+        "gold": 33.4,
+        "unit": "%",
+        "category": "eyewear",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Eyewear: 33%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- *Also covers: glasses, sunglasses, frames, contact lenses. Sector: Fashion & Accessories.*  33% of Gen Z consumers bought eyewear in the last twelve months, spending an average of €20 per month. [S1]\n- - Penetration (bought in last 12 months): 33% - Average monthly spend among buyers: €20 - Annualised spend per Gen Z consumer: €80 - Spend growth vs 2025 wave: +4.4% - Buyers in panel: 2,001 of 6,000 respondents [S2]\n- Purchase is balanced by gender (women 35%, men 32%). It is an older-Gen Z category: penetration rises from 28% among 16-19 year-olds to 38% among 25-29 year-olds. [S3]\n\n### So what for marketers\nInvest in virtual try-on and home try-on kits; drop seasonal frame colours like a fashion brand. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on functional beverages?",
+        "gold": 23.0,
+        "unit": "EUR",
+        "category": "functional-beverages",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Functional Beverages: €23** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: gut health drinks, protein shakes, electrolytes, kombucha. Sector: Food & Beverage.*  Over the past year, 38% of the Gen Z panel purchased functional beverages, spending an average of €23 per month. [S1]\n- - Penetration (bought in last 12 months): 38% - Average monthly spend among buyers: €23 - Annualised spend per Gen Z consumer: €106 - Spend growth vs 2025 wave: +16.4% - Buyers in panel: 2,299 of 6,000 respondents [S2]\n- The category skews towards women: 44% of women bought versus 33% of men. It is an older-Gen Z category: penetration rises from 34% among 16-19 year-olds to 42% among 25-29 year-olds. [S3]\n\n### So what for marketers\nBack functional claims with simple evidence and dosage; packaging should communicate the benefit in one word. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought buy now, pay later last year?",
+        "gold": 40.1,
+        "unit": "%",
+        "category": "bnpl",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Buy Now, Pay Later: highest among female (40%), lowest among male (33%)** [D1].\n- female: 40% (n=2,950)\n- male: 33% (n=2,792)\n- non-binary: 36% (n=258)\n\n### What the research says\n- *Also covers: BNPL, Klarna, pay in 3, instalment payments. Sector: Money & Services.*  36% of Gen Z consumers bought buy now, pay later in the last twelve months, spending an average of €55 per month. [S1]\n- The category skews towards women: 40% of women bought versus 33% of men. It is an older-Gen Z category: penetration rises from 29% among 16-19 year-olds to 43% among 25-29 year-olds. [S2]\n- - Penetration (bought in last 12 months): 36% - Average monthly spend among buyers: €55 - Annualised spend per Gen Z consumer: €241 - Spend growth vs 2025 wave: +7.2% - Buyers in panel: 2,188 of 6,000 respondents [S3]\n\n### So what for marketers\nIntegrate responsible-spending tools and transparent schedules — trust is the long-term growth lever. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for skincare among Gen Z, and what share does it take?",
+        "gold": 29.3,
+        "unit": "%",
+        "category": "skincare",
+        "gold_label": "Physical store",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Physical store leads for Skincare**, cited by 29% of buyers [D1].\n- Physical store: 29%\n- TikTok Shop: 24%\n- Marketplaces (Amazon, Zalando...): 18%\n- Brand website / app: 17%\n- Instagram Shopping: 8%\n\n### What the research says\n- Main purchase channel per category: Color Cosmetics — Physical store (31%); Fragrance — Physical store (36%); Haircare — Physical store (42%); Men's Grooming — Physical store (35%); Nail Care — Physical store (31%); Skincare — Physical store (29%). [S1]\n- *Also covers: skin care, serums, moisturiser, SPF. Sector: Beauty & Personal Care.*  Over the past year, 78% of the Gen Z panel purchased skincare, spending an average of €35 per month. [S2]\n- - Travel & Experiences: €414 - Fast Fashion Apparel: €389 - Food Delivery: €360 - Skincare: €330 - Sneakers: €297 - Specialty Coffee: €260 - Buy Now, Pay Later: €241 - Athleisure & Activewear: €237 - Color Cosmetics: €232 - Investing Apps: €226 - Secondhand & Resale Fashion: €224 - Smartphones: €222 [S3]\n\n### So what for marketers\nLead with ingredient transparency and dermatologist-backed proof points; sell routines as modular bundles rather than single-brand regimens. [S6]\n\n*Offline analyst mode: answer assembled"
+      },
+      {
+        "question": "What share of Gen Z bought sneakers in the last 12 months?",
+        "gold": 60.9,
+        "unit": "%",
+        "category": "sneakers",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Sneakers: 61%** — share of Gen Z respondents who bought in the category in the last 12 months [D1].\n\n### What the research says\n- - Penetration (bought in last 12 months): 61% - Average monthly spend among buyers: €41 - Annualised spend per Gen Z consumer: €297 - Spend growth vs 2025 wave: +3.2% - Buyers in panel: 3,653 of 6,000 respondents [S1]\n- *Also covers: trainers, sneakers, running shoes, kicks. Sector: Fashion & Accessories.*  Over the past year, 61% of the Gen Z panel purchased sneakers, spending an average of €41 per month. [S2]\n- - Travel & Experiences: €414 - Fast Fashion Apparel: €389 - Food Delivery: €360 - Skincare: €330 - Sneakers: €297 - Specialty Coffee: €260 - Buy Now, Pay Later: €241 - Athleisure & Activewear: €237 - Color Cosmetics: €232 - Investing Apps: €226 - Secondhand & Resale Fashion: €224 - Smartphones: €222 [S3]\n\n### So what for marketers\nShift from scarcity marketing to everyday performance and comfort storytelling; reward loyalty with early access rather than raffles. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "How much do Gen Z buyers spend per month on books?",
+        "gold": 14.8,
+        "unit": "EUR",
+        "category": "books",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research"
+        ],
+        "error": null,
+        "answer": "**Books: €15** — average monthly spend (EUR) among buyers [D1].\n\n### What the research says\n- *Also covers: BookTok, novels, e-books, reading. Sector: Entertainment & Media.*  Over the past year, 46% of the Gen Z panel purchased books, spending an average of €15 per month. [S1]\n- - Penetration (bought in last 12 months): 46% - Average monthly spend among buyers: €15 - Annualised spend per Gen Z consumer: €83 - Spend growth vs 2025 wave: +8.3% - Buyers in panel: 2,789 of 6,000 respondents [S2]\n- The category skews towards women: 62% of women bought versus 30% of men. It is an older-Gen Z category: penetration rises from 43% among 16-19 year-olds to 48% among 25-29 year-olds. [S3]\n\n### So what for marketers\nInvest in special editions and creator early-reads; physical bookstores win with BookTok tables. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What percentage of Gen Z women bought home decor last year?",
+        "gold": 57.8,
+        "unit": "%",
+        "category": "home-decor",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Home Decor: highest among female (58%), lowest among male (36%)** [D1].\n- female: 58% (n=2,950)\n- male: 36% (n=2,792)\n- non-binary: 53% (n=258)\n\n### What the research says\n- *Also covers: decor, room decor, interior accessories, posters. Sector: Home & Living.*  Home Decor reached 47% of Gen Z consumers over the last twelve months, spending an average of €22 per month. [S1]\n- The category skews towards women: 58% of women bought versus 36% of men. It is an older-Gen Z category: penetration rises from 41% among 16-19 year-olds to 51% among 25-29 year-olds. [S2]\n- - Penetration (bought in last 12 months): 47% - Average monthly spend among buyers: €22 - Annualised spend per Gen Z consumer: €126 - Spend growth vs 2025 wave: +4.2% - Buyers in panel: 2,835 of 6,000 respondents [S3]\n\n### So what for marketers\nMake products renter-proof (no drilling) and photographable; collaborate with room-tour creators. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Claude agent.*"
+      },
+      {
+        "question": "What is the main purchase channel for furniture among Gen Z, and what share does it take?",
+        "gold": 37.3,
+        "unit": "%",
+        "category": "furniture",
+        "gold_label": "Physical store",
+        "correct": true,
+        "cited_dataset": true,
+        "cited_any": true,
+        "tools": [
+          "search_research",
+          "query_survey",
+          "search_research",
+          "create_chart"
+        ],
+        "error": null,
+        "answer": "**Physical store leads for Furniture**, cited by 37% of buyers [D1].\n- Physical store: 37%\n- Marketplaces (Amazon, Zalando...): 26%\n- Resale apps (Vinted, Depop...): 22%\n- Brand website / app: 15%\n\n### What the research says\n- Main purchase channel per category: Candles & Home Fragrance — Physical store (49%); Furniture — Physical store (37%); Home Decor — Physical store (33%); Houseplants — Physical store (65%); Small Kitchen Appliances — Marketplaces (Amazon, Zalando...) (47%). [S1]\n- Discovery is led by In store (25% of buyers), followed by TikTok (24%) and Instagram (20%). TikTok accounts for 26% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (17% vs 16%). [S2]\n- *Also covers: sofa, desk, flat-pack furniture, home office. Sector: Home & Living.*  Furniture reached 26% of Gen Z consumers over the last twelve months, spending an average of €26 per month. [S3]\n\n### So what for marketers\nOffer modular, movable designs and buy-back programmes; local resale is a key competitor. [S6]\n\n*Offline analyst mode: answer assembled by rules from retrieved evidence. Configure `ANTHROPIC_API_KEY` for the full Cla"
+      }
+    ]
+  }
+}

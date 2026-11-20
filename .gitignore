@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node / Next
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Data built locally (embeddings are rebuilt on first start)
+data/index/
+
+# Env & OS
+.env
+.env.*
+!.env.example
+.DS_Store
+.claude/settings.local.json
