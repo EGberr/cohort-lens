@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AlertTriangle, BarChart3, ChevronDown, Database, ListTree, Search, Sparkles } from "lucide-react";
 import { cx } from "@/lib/format";
+import { useLang } from "@/lib/i18n";
 
 export type ToolCall = { id: string; name: string; input: Record<string, unknown>; is_error: boolean; summary: string };
 
@@ -33,18 +34,30 @@ function describe(call: ToolCall) {
   return "";
 }
 
+const STATUS_FR: Record<string, string> = {
+  "Planning the analysis": "Planification de l'analyse",
+  "Planning the analysis (offline analyst)": "Planification de l'analyse (hors ligne)",
+  "Searching the research library": "Recherche dans les études",
+  "Querying the survey panel": "Interrogation du panel",
+  "Mapping categories": "Identification des catégories",
+  "Building a chart": "Création d'un graphique",
+  "Writing the answer": "Rédaction de la réponse",
+};
+
 export function Trace({ calls, status, running }: { calls: ToolCall[]; status?: string; running: boolean }) {
   const [open, setOpen] = useState(false);
+  const { t, lang } = useLang();
   if (!calls.length && !running) return null;
+  const shown = lang === "fr" && status ? (STATUS_FR[status] ?? status) : status;
   return (
     <div className="mb-4 rounded-2xl border hairline bg-surface-2/60">
       <button onClick={() => setOpen((o) => !o)} className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-[12.5px]">
         <Sparkles size={14} className="shrink-0 text-accent-ink" />
         {running ? (
-          <span className="text-shimmer font-medium">{status ?? "Thinking"}…</span>
+          <span className="text-shimmer font-medium">{shown ?? t("chat.thinking")}…</span>
         ) : (
           <span className="font-medium text-ink-2">
-            Analysis trace · {calls.length} step{calls.length === 1 ? "" : "s"}
+            {t("chat.trace")} · {calls.length} {t("chat.steps")}
           </span>
         )}
         <span className="ml-auto flex items-center gap-1.5 text-muted">

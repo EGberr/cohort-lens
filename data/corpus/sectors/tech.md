@@ -16,20 +16,20 @@ synthetic: true
 
 ## Overview
 
-The Tech & Electronics sector covers 6 categories in this panel: Smartphones, Wireless Audio, Gaming Hardware, Wearables, Creator Gear, Smart Home. The most widely bought is Wireless Audio (48% penetration), while Creator Gear is the most niche (20%). The fastest-growing category is Creator Gear (+12.9% spend), and the weakest is Gaming Hardware (-1.5%).
+The Tech & Electronics sector covers 6 categories in this panel: Smartphones, Wireless Audio, Gaming Hardware, Wearables, Creator Gear, Smart Home. The most widely bought is Wireless Audio (47% penetration), while Creator Gear is the most niche (20%). The fastest-growing category is Creator Gear (+12.9% spend), and the weakest is Gaming Hardware (-1.5%).
 
 ## Category ranking by penetration
 
-1. Wireless Audio: 48% penetration, €15/month, +3.9% growth
+1. Wireless Audio: 47% penetration, €15/month, +3.9% growth
 2. Smartphones: 42% penetration, €44/month, +0.8% growth
-3. Gaming Hardware: 37% penetration, €42/month, -1.5% growth
-4. Wearables: 29% penetration, €19/month, +9.7% growth
-5. Smart Home: 28% penetration, €13/month, +2.1% growth
+3. Gaming Hardware: 38% penetration, €41/month, -1.5% growth
+4. Wearables: 28% penetration, €19/month, +9.7% growth
+5. Smart Home: 27% penetration, €12/month, +2.1% growth
 6. Creator Gear: 20% penetration, €28/month, +12.9% growth
 
 ## Channels
 
-Main purchase channel per category: Creator Gear — Marketplaces (Amazon, Zalando...) (51%); Gaming Hardware — Marketplaces (Amazon, Zalando...) (39%); Smart Home — Marketplaces (Amazon, Zalando...) (55%); Smartphones — Physical store (30%); Wearables — Marketplaces (Amazon, Zalando...) (35%); Wireless Audio — Marketplaces (Amazon, Zalando...) (37%).
+Main purchase channel per category: Creator Gear — Online marketplaces (49%); Gaming Hardware — Online marketplaces (41%); Smart Home — Online marketplaces (57%); Smartphones — Brand website / app (30%); Wearables — Online marketplaces (35%); Wireless Audio — Online marketplaces (36%).
 
 ## What drives purchase
 

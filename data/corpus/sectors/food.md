@@ -16,21 +16,21 @@ synthetic: true
 
 ## Overview
 
-The Food & Beverage sector covers 7 categories in this panel: Energy Drinks, Plant-based Food, Specialty Coffee, Better-for-you Snacks, Low & No Alcohol, Food Delivery, Functional Beverages. The most widely bought is Food Delivery (66% penetration), while Low & No Alcohol is the most niche (34%). The fastest-growing category is Low & No Alcohol (+18.2% spend), and the weakest is Plant-based Food (-2.8%).
+The Food & Beverage sector covers 7 categories in this panel: Energy Drinks, Plant-based Food, Specialty Coffee, Better-for-you Snacks, Low & No Alcohol, Food Delivery, Functional Beverages. The most widely bought is Food Delivery (68% penetration), while Low & No Alcohol is the most niche (34%). The fastest-growing category is Low & No Alcohol (+18.2% spend), and the weakest is Plant-based Food (-2.8%).
 
 ## Category ranking by penetration
 
-1. Food Delivery: 66% penetration, €46/month, +1.9% growth
-2. Specialty Coffee: 65% penetration, €33/month, +7.5% growth
+1. Food Delivery: 68% penetration, €46/month, +1.9% growth
+2. Specialty Coffee: 66% penetration, €34/month, +7.5% growth
 3. Better-for-you Snacks: 63% penetration, €20/month, +9.1% growth
-4. Energy Drinks: 58% penetration, €18/month, +10.6% growth
+4. Energy Drinks: 59% penetration, €18/month, +10.6% growth
 5. Plant-based Food: 42% penetration, €28/month, -2.8% growth
 6. Functional Beverages: 38% penetration, €23/month, +16.4% growth
-7. Low & No Alcohol: 34% penetration, €22/month, +18.2% growth
+7. Low & No Alcohol: 34% penetration, €23/month, +18.2% growth
 
 ## Channels
 
-Main purchase channel per category: Better-for-you Snacks — Physical store (69%); Energy Drinks — Physical store (71%); Food Delivery — Brand website / app (64%); Functional Beverages — Physical store (57%); Low & No Alcohol — Physical store (70%); Plant-based Food — Physical store (80%); Specialty Coffee — Physical store (65%).
+Main purchase channel per category: Better-for-you Snacks — Physical store (70%); Energy Drinks — Physical store (72%); Food Delivery — Brand website / app (64%); Functional Beverages — Physical store (57%); Low & No Alcohol — Physical store (69%); Plant-based Food — Physical store (78%); Specialty Coffee — Physical store (65%).
 
 ## What drives purchase
 

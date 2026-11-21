@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-Pet Care reached 32% of Gen Z consumers over the last twelve months, spending an average of €45 per month. The category is growing modestly (+6.1% spend vs the 2025 wave). Gen Z treats pets as family ('pet parents') and trades up on food quality even under budget pressure.
+Pet Care reached 34% of Gen Z consumers over the last twelve months, spending an average of €44 per month. The category is growing modestly (+6.1% spend vs the 2025 wave). Gen Z treats pets as family ('pet parents') and trades up on food quality even under budget pressure.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 32%
-- Average monthly spend among buyers: €45
-- Annualised spend per Gen Z consumer: €175
+- Penetration (bought in last 12 months): 34%
+- Average monthly spend among buyers: €44
+- Annualised spend per Gen Z consumer: €180
 - Spend growth vs 2025 wave: +6.1%
-- Buyers in panel: 1,951 of 6,000 respondents
+- Buyers in panel: 2,038 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 38% of women bought versus 27% of men. It is an older-Gen Z category: penetration rises from 23% among 16-19 year-olds to 41% among 25-29 year-olds. By market, penetration is highest in Spain (40%) and lowest in Italy (24%). Buyers in the US spend the most (€55 per month). Among high-income respondents penetration reaches 42%, compared with 26% in the low-income band.
+The category skews towards women: 38% of women bought versus 29% of men. It is an older-Gen Z category: penetration rises from 26% among 16-19 year-olds to 42% among 25-29 year-olds. By market, penetration is highest in Spain (38%) and lowest in the US (30%). Buyers in the US spend the most (€55 per month). Among high-income respondents penetration reaches 45%, compared with 27% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by In store (25% of buyers), followed by TikTok (23%) and Friends & family (20%). TikTok accounts for 27% of first discoveries among 16-19 year-olds versus 22% among 25-29 year-olds, while search engines matter more for the older group (9.4% vs 7.8%).
+Discovery is led by TikTok (25% of buyers), followed by In store (24%) and Friends & family (21%). TikTok accounts for 30% of first discoveries among 16-19 year-olds versus 24% among 25-29 year-olds, while search engines matter more for the older group (7.3% vs 7.0%).
 
-The main purchase channel is Physical store (40%), then Marketplaces (Amazon, Zalando...) (32%) and Subscription (17%).
+The main purchase channel is Physical store (42%), then Online marketplaces (29%) and Subscription (19%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is health benefits (42% of buyers cite it first), ahead of quality & durability (29%) and brand identity & values (19%). Price is the decisive factor for 49% of buyers, 12 points below the panel average of 61%. The main barriers reported in open answers are vet costs and price of premium food.
+The top purchase driver is health benefits (40% of buyers cite it first), ahead of quality & durability (29%) and brand identity & values (19%). Price is the decisive factor for 46% of buyers, 15 points below the panel average of 61%. The main barriers reported in open answers are vet costs and price of premium food.
 
 ## Values: sustainability, dupes and loyalty
 
-36% of buyers say they would pay more for a sustainable option (11 points above the panel average of 25%). 5.4% bought a dupe or lookalike product in the last year (12 points below the panel average of 17%), and 60% usually repurchase the same brand (21 points above the panel average of 39%).
+38% of buyers say they would pay more for a sustainable option (12 points above the panel average of 26%). 5.8% bought a dupe or lookalike product in the last year (11 points below the panel average of 17%), and 61% usually repurchase the same brand (23 points above the panel average of 39%).
+
+## Products Gen Z buys
+
+Among pet care buyers, the most common product type is Cat toys & accessories (35% of buyers). Cat toys & accessories over-indexes with 16-19 year-olds (24% of its buyers), while Fresh pet food skews older (48% aged 25-29).
+
+- **Cat toys & accessories**: 35% of category buyers, typical price €15, interest stable, mostly bought via Physical store.
+- **Dog walking gear**: 34% of category buyers, typical price €30, interest stable, mostly bought via Physical store.
+- **Fresh pet food**: 31% of category buyers, typical price €70, interest rising, mostly bought via Physical store.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is health benefits (42% of buyers cite it first), ahead 
 
 Premiumise on health and transparency; subscription delivery fits the replenishment cycle.
 
-- Prioritise In store for awareness: it is the first discovery source for 25% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 25% of buyers.
 - Build the offer around health benefits, the most-cited driver.
-- Plan conversion on Physical store, which carries 40% of purchases.
+- Plan conversion on Physical store, which carries 42% of purchases.

@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-Food Delivery reached 66% of Gen Z consumers over the last twelve months, spending an average of €46 per month. The category is broadly flat (+1.9% spend vs the 2025 wave). Delivery is under cost-of-living pressure: Gen Z orders slightly less often but uses subscription passes and promo codes aggressively.
+Food Delivery reached 68% of Gen Z consumers over the last twelve months, spending an average of €46 per month. The category is broadly flat (+1.9% spend vs the 2025 wave). Delivery is under cost-of-living pressure: Gen Z orders slightly less often but uses subscription passes and promo codes aggressively.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 66%
+- Penetration (bought in last 12 months): 68%
 - Average monthly spend among buyers: €46
-- Annualised spend per Gen Z consumer: €360
+- Annualised spend per Gen Z consumer: €376
 - Spend growth vs 2025 wave: +1.9%
-- Buyers in panel: 3,946 of 6,000 respondents
+- Buyers in panel: 4,062 of 6,000 respondents
 
 ## Who buys
 
-Purchase is balanced by gender (women 67%, men 64%). It is an older-Gen Z category: penetration rises from 61% among 16-19 year-olds to 70% among 25-29 year-olds. By market, penetration is highest in Spain (73%) and lowest in France (58%). Buyers in the US spend the most (€55 per month). Among high-income respondents penetration reaches 73%, compared with 61% in the low-income band.
+Purchase is balanced by gender (women 68%, men 67%). It is an older-Gen Z category: penetration rises from 63% among 16-19 year-olds to 73% among 25-29 year-olds. By market, penetration is highest in Italy (71%) and lowest in Spain (63%). Buyers in the US spend the most (€54 per month). Among high-income respondents penetration reaches 75%, compared with 63% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by Friends & family (29% of buyers), followed by TikTok (23%) and Search engines (19%). TikTok accounts for 26% of first discoveries among 16-19 year-olds versus 20% among 25-29 year-olds, while search engines matter more for the older group (22% vs 14%).
+Discovery is led by Friends & family (29% of buyers), followed by TikTok (24%) and Search engines (18%). TikTok accounts for 26% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (20% vs 15%).
 
-The main purchase channel is Brand website / app (64%), then Subscription (26%) and Marketplaces (Amazon, Zalando...) (9.5%).
+The main purchase channel is Brand website / app (64%), then Subscription (25%) and Online marketplaces (10%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is convenience (40% of buyers cite it first), ahead of price / value for money (29%) and novelty & trends (21%). Price is the decisive factor for 74% of buyers, 13 points above the panel average of 61%. The main barriers reported in open answers are delivery fees and cost of living.
+The top purchase driver is convenience (42% of buyers cite it first), ahead of price / value for money (30%) and novelty & trends (19%). Price is the decisive factor for 76% of buyers, 14 points above the panel average of 61%. The main barriers reported in open answers are delivery fees and cost of living.
 
 ## Values: sustainability, dupes and loyalty
 
-18% of buyers say they would pay more for a sustainable option (8 points below the panel average of 25%). 3.6% bought a dupe or lookalike product in the last year (14 points below the panel average of 17%), and 40% usually repurchase the same brand (in line with the panel average of 39%).
+19% of buyers say they would pay more for a sustainable option (7 points below the panel average of 26%). 4.0% bought a dupe or lookalike product in the last year (13 points below the panel average of 17%), and 38% usually repurchase the same brand (in line with the panel average of 39%).
+
+## Products Gen Z buys
+
+Among food delivery buyers, the most common product type is Burger delivery (44% of buyers). Burger delivery over-indexes with 16-19 year-olds (32% of its buyers), while Delivery subscription pass skews older (44% aged 25-29).
+
+- **Burger delivery**: 44% of category buyers, typical price €15, interest stable, mostly bought via Brand website / app.
+- **Sushi delivery**: 33% of category buyers, typical price €22, interest stable, mostly bought via Brand website / app.
+- **Delivery subscription pass**: 23% of category buyers, typical price €6/month, interest rising, mostly bought via Brand website / app.
 
 ## Trends to watch
 

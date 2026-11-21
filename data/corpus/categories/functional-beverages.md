@@ -24,27 +24,35 @@ Over the past year, 38% of the Gen Z panel purchased functional beverages, spend
 
 - Penetration (bought in last 12 months): 38%
 - Average monthly spend among buyers: €23
-- Annualised spend per Gen Z consumer: €106
+- Annualised spend per Gen Z consumer: €103
 - Spend growth vs 2025 wave: +16.4%
-- Buyers in panel: 2,299 of 6,000 respondents
+- Buyers in panel: 2,279 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 44% of women bought versus 33% of men. It is an older-Gen Z category: penetration rises from 34% among 16-19 year-olds to 42% among 25-29 year-olds. By market, penetration is highest in Germany (46%) and lowest in Italy (30%). Buyers in the US spend the most (€28 per month). Among high-income respondents penetration reaches 44%, compared with 35% in the low-income band.
+The category skews towards women: 42% of women bought versus 34% of men. It is an older-Gen Z category: penetration rises from 33% among 16-19 year-olds to 43% among 25-29 year-olds. By market, penetration is highest in Spain (41%) and lowest in Germany (32%). Buyers in the US spend the most (€28 per month). Among high-income respondents penetration reaches 47%, compared with 33% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (36% of buyers), followed by In store (17%) and Instagram (16%). TikTok accounts for 38% of first discoveries among 16-19 year-olds versus 32% among 25-29 year-olds, while search engines matter more for the older group (6.9% vs 4.3%).
+Discovery is led by TikTok (35% of buyers), followed by In store (18%) and Instagram (16%). TikTok accounts for 39% of first discoveries among 16-19 year-olds versus 34% among 25-29 year-olds, while search engines matter more for the older group (7.4% vs 6.2%).
 
-The main purchase channel is Physical store (57%), then Marketplaces (Amazon, Zalando...) (16%) and Brand website / app (10%). Social commerce through TikTok Shop reaches 8.0% of purchases among the youngest buyers, against 8.4% among 25-29 year-olds.
+The main purchase channel is Physical store (57%), then Online marketplaces (18%) and Brand website / app (9.7%). Social commerce through TikTok Shop reaches 8.3% of purchases among the youngest buyers, against 7.2% among 25-29 year-olds.
 
 ## Purchase drivers and barriers
 
-The top purchase driver is health benefits (40% of buyers cite it first), ahead of performance & specs (29%) and novelty & trends (20%). Price is the decisive factor for 57% of buyers, 4 points below the panel average of 61%. The main barriers reported in open answers are doubt about health claims and price.
+The top purchase driver is health benefits (42% of buyers cite it first), ahead of performance & specs (27%) and novelty & trends (21%). Price is the decisive factor for 58% of buyers, 4 points below the panel average of 61%. The main barriers reported in open answers are doubt about health claims and price.
 
 ## Values: sustainability, dupes and loyalty
 
-34% of buyers say they would pay more for a sustainable option (9 points above the panel average of 25%). 12% bought a dupe or lookalike product in the last year (5 points below the panel average of 17%), and 33% usually repurchase the same brand (6 points below the panel average of 39%).
+36% of buyers say they would pay more for a sustainable option (10 points above the panel average of 26%). 9.9% bought a dupe or lookalike product in the last year (7 points below the panel average of 17%), and 32% usually repurchase the same brand (7 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among functional beverages buyers, the most common product type is Electrolyte drink mix (38% of buyers). Electrolyte drink mix over-indexes with 16-19 year-olds (28% of its buyers), while Kombucha skews older (45% aged 25-29).
+
+- **Electrolyte drink mix**: 38% of category buyers, typical price €3, interest rising, mostly bought via Physical store.
+- **Prebiotic soda**: 33% of category buyers, typical price €3, interest rising, mostly bought via Physical store.
+- **Kombucha**: 29% of category buyers, typical price €4, interest stable, mostly bought via Physical store.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is health benefits (40% of buyers cite it first), ahead 
 
 Back functional claims with simple evidence and dosage; packaging should communicate the benefit in one word.
 
-- Prioritise TikTok for awareness: it is the first discovery source for 36% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 35% of buyers.
 - Build the offer around health benefits, the most-cited driver.
 - Plan conversion on Physical store, which carries 57% of purchases.

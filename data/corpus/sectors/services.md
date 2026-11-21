@@ -16,18 +16,18 @@ synthetic: true
 
 ## Overview
 
-The Money & Services sector covers 4 categories in this panel: Buy Now, Pay Later, Investing Apps, Pet Care, Online Learning. The most widely bought is Buy Now, Pay Later (36% penetration), while Investing Apps is the most niche (27%). The fastest-growing category is Investing Apps (+10.3% spend), and the weakest is Online Learning (+4.9%).
+The Money & Services sector covers 4 categories in this panel: Buy Now, Pay Later, Investing Apps, Pet Care, Online Learning. The most widely bought is Buy Now, Pay Later (36% penetration), while Investing Apps is the most niche (28%). The fastest-growing category is Investing Apps (+10.3% spend), and the weakest is Online Learning (+4.9%).
 
 ## Category ranking by penetration
 
-1. Buy Now, Pay Later: 36% penetration, €55/month, +7.2% growth
-2. Online Learning: 33% penetration, €15/month, +4.9% growth
-3. Pet Care: 32% penetration, €45/month, +6.1% growth
-4. Investing Apps: 27% penetration, €70/month, +10.3% growth
+1. Buy Now, Pay Later: 36% penetration, €56/month, +7.2% growth
+2. Pet Care: 34% penetration, €44/month, +6.1% growth
+3. Online Learning: 33% penetration, €15/month, +4.9% growth
+4. Investing Apps: 28% penetration, €71/month, +10.3% growth
 
 ## Channels
 
-Main purchase channel per category: Buy Now, Pay Later — Brand website / app (54%); Investing Apps — Brand website / app (93%); Online Learning — Subscription (74%); Pet Care — Physical store (40%).
+Main purchase channel per category: Buy Now, Pay Later — Brand website / app (55%); Investing Apps — Brand website / app (93%); Online Learning — Subscription (72%); Pet Care — Physical store (42%).
 
 ## What drives purchase
 

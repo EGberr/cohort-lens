@@ -214,6 +214,8 @@ class CorpusBuilder:
             f"{_pct(k['dupe_rate'])} bought a dupe or lookalike product in the last year "
             f"({self._vs_avg(k['dupe_rate'], 'dupe_rate')}), and {_pct(k['brand_loyalty_rate'])} usually "
             f"repurchase the same brand ({self._vs_avg(k['brand_loyalty_rate'], 'brand_loyalty_rate')}).",
+            "## Products Gen Z buys",
+            self._products_section(cat),
             "## Trends to watch",
             "\n".join(f"- **{t.capitalize()}**" for t in cat.trends) or "- No specific trend flagged.",
             "## Implications for marketers",
@@ -228,6 +230,25 @@ class CorpusBuilder:
             ),
         ]
         return "\n\n".join(lines) + "\n"
+
+    def _products_section(self, cat: Category) -> str:
+        prods = sorted(self.s.product_stats(cat.slug), key=lambda p: -p["share_of_category"])
+        trend_word = {"rising": "rising", "steady": "stable", "cooling": "cooling"}
+        lead = prods[0]
+        young = max(prods, key=lambda p: p["share_16_19"])
+        old = max(prods, key=lambda p: p["share_25_29"])
+        lines = [
+            f"Among {cat.name.lower()} buyers, the most common product type is {lead['name']} "
+            f"({_pct(lead['share_of_category'])} of buyers). {young['name']} over-indexes with 16-19 year-olds "
+            f"({_pct(young['share_16_19'])} of its buyers), while {old['name']} skews older "
+            f"({_pct(old['share_25_29'])} aged 25-29).",
+        ]
+        for p in prods:
+            lines.append(
+                f"- **{p['name']}**: {_pct(p['share_of_category'])} of category buyers, typical price "
+                f"{_eur(p['price'])}{'/month' if p['per_month'] else ''}, interest {trend_word[p['trend']]}, mostly bought via {p['top_channel']}."
+            )
+        return "\n".join(lines[:1]) + "\n\n" + "\n".join(lines[1:])
 
     # ── sector report ────────────────────────────────────────────────────────
     def group_report(self, group: str) -> str:

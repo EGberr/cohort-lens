@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-58% of Gen Z consumers bought energy drinks in the last twelve months, spending an average of €18 per month. The category is growing solidly (+10.6% spend vs the 2025 wave). Energy drinks have been reframed as 'functional refreshment': zero-sugar, creator-owned brands win with flavour drops and gaming tie-ins.
+59% of Gen Z consumers bought energy drinks in the last twelve months, spending an average of €18 per month. The category is growing solidly (+10.6% spend vs the 2025 wave). Energy drinks have been reframed as 'functional refreshment': zero-sugar, creator-owned brands win with flavour drops and gaming tie-ins.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 58%
+- Penetration (bought in last 12 months): 59%
 - Average monthly spend among buyers: €18
-- Annualised spend per Gen Z consumer: €123
+- Annualised spend per Gen Z consumer: €127
 - Spend growth vs 2025 wave: +10.6%
-- Buyers in panel: 3,502 of 6,000 respondents
+- Buyers in panel: 3,544 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards men: 67% of men bought versus 50% of women. Penetration is similar across age bands (16-19: 59%, 25-29: 57%). By market, penetration is highest in France (62%) and lowest in Spain (53%). Buyers in the US spend the most (€21 per month). Among high-income respondents penetration reaches 64%, compared with 54% in the low-income band.
+The category skews towards men: 66% of men bought versus 53% of women. It is driven by younger Gen Z: 61% of 16-19 year-olds bought, against 57% of 25-29 year-olds. By market, penetration is highest in the US (66%) and lowest in France (54%). Buyers in the US spend the most (€22 per month). Among high-income respondents penetration reaches 65%, compared with 57% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (32% of buyers), followed by In store (23%) and Friends & family (22%). TikTok accounts for 35% of first discoveries among 16-19 year-olds versus 29% among 25-29 year-olds, while search engines matter more for the older group (3.8% vs 3.7%).
+Discovery is led by TikTok (32% of buyers), followed by In store (24%) and Friends & family (22%). TikTok accounts for 36% of first discoveries among 16-19 year-olds versus 30% among 25-29 year-olds, while search engines matter more for the older group (3.8% vs 4.0%).
 
-The main purchase channel is Physical store (71%), then Marketplaces (Amazon, Zalando...) (12%) and TikTok Shop (6.7%).
+The main purchase channel is Physical store (72%), then Online marketplaces (12%) and TikTok Shop (6.7%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is novelty & trends (43% of buyers cite it first), ahead of performance & specs (28%) and price / value for money (18%). Price is the decisive factor for 63% of buyers, in line with the panel average of 61%. The main barriers reported in open answers are health concerns about caffeine and sugar content.
+The top purchase driver is novelty & trends (41% of buyers cite it first), ahead of performance & specs (28%) and price / value for money (20%). Price is the decisive factor for 63% of buyers, in line with the panel average of 61%. The main barriers reported in open answers are health concerns about caffeine and sugar content.
 
 ## Values: sustainability, dupes and loyalty
 
-14% of buyers say they would pay more for a sustainable option (11 points below the panel average of 25%). 19% bought a dupe or lookalike product in the last year (in line with the panel average of 17%), and 34% usually repurchase the same brand (4 points below the panel average of 39%).
+14% of buyers say they would pay more for a sustainable option (12 points below the panel average of 26%). 18% bought a dupe or lookalike product in the last year (in line with the panel average of 17%), and 36% usually repurchase the same brand (in line with the panel average of 39%).
+
+## Products Gen Z buys
+
+Among energy drinks buyers, the most common product type is Zero-sugar energy can (44% of buyers). Creator-brand energy drink over-indexes with 16-19 year-olds (36% of its buyers), while Classic energy drink skews older (40% aged 25-29).
+
+- **Zero-sugar energy can**: 44% of category buyers, typical price €2, interest rising, mostly bought via Physical store.
+- **Classic energy drink**: 29% of category buyers, typical price €2, interest cooling, mostly bought via Physical store.
+- **Creator-brand energy drink**: 27% of category buyers, typical price €3, interest rising, mostly bought via Physical store.
 
 ## Trends to watch
 
@@ -58,4 +66,4 @@ Run frequent limited flavour drops, partner with gaming and streaming creators, 
 
 - Prioritise TikTok for awareness: it is the first discovery source for 32% of buyers.
 - Build the offer around novelty & trends, the most-cited driver.
-- Plan conversion on Physical store, which carries 71% of purchases.
+- Plan conversion on Physical store, which carries 72% of purchases.

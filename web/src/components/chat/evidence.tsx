@@ -6,6 +6,7 @@ import type { Dataset, PassageSource } from "@/lib/api";
 import { cx, SEGMENT_LABEL } from "@/lib/format";
 import { fmtValue } from "@/components/charts";
 import { docTypeLabel } from "@/components/doc-reader";
+import { useLang } from "@/lib/i18n";
 
 export function DatasetTable({ ds, compact }: { ds: Dataset; compact?: boolean }) {
   const multiCat = Object.keys(ds.category_names).length > 1;
@@ -51,6 +52,7 @@ export function EvidencePanel({
   onOpenDoc: (docId: string, section: string) => void;
 }) {
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
+  const { t } = useLang();
   useEffect(() => {
     if (active) refs.current[active]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }, [active]);
@@ -59,7 +61,7 @@ export function EvidencePanel({
     return (
       <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center text-[13px] text-muted">
         <BarChart3 size={20} />
-        Evidence used in an answer appears here — survey datasets and research passages, each with its citation ID.
+        {t("chat.empty_evidence")}
       </div>
     );
   }
@@ -68,7 +70,7 @@ export function EvidencePanel({
       {datasets.length > 0 && (
         <section>
           <h4 className="mb-2 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
-            <Database size={12} /> Survey datasets
+            <Database size={12} /> {t("chat.datasets_title")}
           </h4>
           <div className="flex flex-col gap-2">
             {datasets.map((d) => (
@@ -104,7 +106,7 @@ export function EvidencePanel({
       {sources.length > 0 && (
         <section>
           <h4 className="mb-2 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
-            <FileText size={12} /> Research passages
+            <FileText size={12} /> {t("chat.passages_title")}
           </h4>
           <div className="flex flex-col gap-2">
             {sources.map((s) => (
@@ -129,7 +131,7 @@ export function EvidencePanel({
                   onClick={() => onOpenDoc(s.doc_id, s.section)}
                   className="mt-2 inline-flex items-center gap-0.5 text-[11.5px] font-medium text-accent-ink hover:underline"
                 >
-                  Open in report <ChevronRight size={13} />
+                  {t("chat.open_report")} <ChevronRight size={13} />
                 </button>
               </div>
             ))}

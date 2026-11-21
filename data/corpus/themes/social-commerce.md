@@ -14,31 +14,31 @@ synthetic: true
 
 ## Summary
 
-TikTok is the single most important discovery source for Gen Z in this panel. It is the first discovery source for 51% of color cosmetics buyers, and TikTok Shop has become a meaningful checkout channel in beauty and accessories.
+TikTok is the single most important discovery source for Gen Z in this panel. It is the first discovery source for 48% of color cosmetics buyers, and TikTok Shop has become a meaningful checkout channel in beauty and accessories.
 
 ## Where TikTok drives discovery
 
-- Color Cosmetics: 51% of buyers discovered via TikTok
-- Nail Care: 48% of buyers discovered via TikTok
-- Fragrance: 45% of buyers discovered via TikTok
-- Sleep Products: 44% of buyers discovered via TikTok
+- Color Cosmetics: 48% of buyers discovered via TikTok
+- Nail Care: 47% of buyers discovered via TikTok
+- Fragrance: 46% of buyers discovered via TikTok
+- Sleep Products: 45% of buyers discovered via TikTok
 - Books: 44% of buyers discovered via TikTok
-- Skincare: 42% of buyers discovered via TikTok
+- Skincare: 44% of buyers discovered via TikTok
 - Collectibles & Trading Cards: 42% of buyers discovered via TikTok
-- Fast Fashion Apparel: 39% of buyers discovered via TikTok
+- Fast Fashion Apparel: 40% of buyers discovered via TikTok
 - Demi-fine Jewelry: 38% of buyers discovered via TikTok
-- Functional Beverages: 36% of buyers discovered via TikTok
+- Athleisure & Activewear: 36% of buyers discovered via TikTok
 
 ## Where TikTok Shop converts
 
-- Color Cosmetics: 27% of purchases on TikTok Shop
-- Nail Care: 27% of purchases on TikTok Shop
+- Color Cosmetics: 28% of purchases on TikTok Shop
+- Nail Care: 28% of purchases on TikTok Shop
 - Skincare: 24% of purchases on TikTok Shop
-- Demi-fine Jewelry: 20% of purchases on TikTok Shop
-- Sleep Products: 17% of purchases on TikTok Shop
+- Demi-fine Jewelry: 19% of purchases on TikTok Shop
+- Sleep Products: 19% of purchases on TikTok Shop
 - Fragrance: 16% of purchases on TikTok Shop
-- Collectibles & Trading Cards: 16% of purchases on TikTok Shop
-- Home Decor: 15% of purchases on TikTok Shop
+- Haircare: 15% of purchases on TikTok Shop
+- Fast Fashion Apparel: 14% of purchases on TikTok Shop
 
 ## Implications
 

@@ -17,6 +17,7 @@ from typing import Any
 import anthropic
 
 from app.config import settings
+from app.corpus.spec import BY_SLUG
 from app.prompts import SYSTEM_PROMPT
 from app.tools import TOOLS, SourceRegistry, Toolbox, ToolError
 
@@ -70,8 +71,21 @@ class ClaudeAnalyst:
             kwargs |= {"betas": [FALLBACK_BETA], "fallbacks": "default"}
         return kwargs
 
-    async def run(self, history: list[dict[str, str]]) -> AsyncIterator[Event]:
+    async def run(
+        self, history: list[dict[str, str]], scope: str | None = None, lang: str = "en"
+    ) -> AsyncIterator[Event]:
         messages = _history_to_messages(history)
+        if messages and messages[-1]["role"] == "user":
+            notes = []
+            if scope:
+                notes.append(
+                    f"I am browsing the {BY_SLUG[scope].name} category (slug `{scope}`); "
+                    "focus on it unless my question clearly asks about something else."
+                )
+            if lang == "fr":
+                notes.append("My interface is in French: answer in French.")
+            if notes:
+                messages[-1]["content"] += "\n\n(Context: " + " ".join(notes) + ")"
         if not messages or messages[-1]["role"] != "user":
             yield {"type": "error", "message": "The last message must come from the user."}
             return

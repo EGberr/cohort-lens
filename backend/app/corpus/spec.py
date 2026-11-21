@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 CHANNELS = {
     "tiktok_shop": "TikTok Shop",
     "instagram": "Instagram Shopping",
-    "marketplace": "Marketplaces (Amazon, Zalando...)",
+    "marketplace": "Online marketplaces",
     "brand_dtc": "Brand website / app",
     "physical_store": "Physical store",
     "resale": "Resale apps (Vinted, Depop...)",
@@ -51,10 +51,10 @@ GROUPS = {
     "fashion": "Fashion & Accessories",
     "food": "Food & Beverage",
     "tech": "Tech & Electronics",
-    "entertainment": "Entertainment & Media",
+    "entertainment": "Entertainment & Experiences",
     "wellness": "Health & Wellness",
     "home": "Home & Living",
-    "mobility": "Mobility & Travel",
+    "mobility": "Cars & Mobility",
     "services": "Money & Services",
 }
 
@@ -1062,11 +1062,11 @@ CATEGORIES: list[Category] = [
         "Offer modular, movable designs and buy-back programmes; local resale is a key competitor.",
         ("secondhand furniture", "modular design", "buy-back schemes"),
     ),
-    # ── Mobility & Travel ────────────────────────────────────────────────────
+    # ── Cars & Mobility (travel sits with experiences) ───────────────────────
     _c(
         "travel-experiences",
         "Travel & Experiences",
-        "mobility",
+        "entertainment",
         ("travel", "holidays", "trips", "city breaks"),
         0.56,
         58,
@@ -1084,6 +1084,50 @@ CATEGORIES: list[Category] = [
         "TikTok is now a travel search engine for Gen Z; 'dupe destinations' (cheaper alternatives to famous places) are a growing trend.",
         "Optimise destination content for TikTok search and market lesser-known 'dupe' destinations on value.",
         ("dupe destinations", "TikTok as travel search", "set-jetting"),
+    ),
+    _c(
+        "electric-vehicles",
+        "Electric Vehicles",
+        "mobility",
+        ("EV", "electric cars", "Tesla", "electric car"),
+        0.06,
+        310,
+        24.5,
+        {"brand_dtc": 48, "physical_store": 40, "subscription": 12},
+        {"youtube": 34, "search": 22, "friends": 18, "tiktok": 14, "instagram": 8, "in_store": 4},
+        ("sustainability", "performance", "price"),
+        ("purchase price", "charging access for renters"),
+        0.58,
+        0.62,
+        0.41,
+        0.02,
+        -0.30,
+        0.85,
+        "Few Gen Z consumers can afford a new car, but those who buy one increasingly choose electric: leasing and small city EVs are the entry point, and YouTube range tests outrank dealer advice.",
+        "Lead with total cost of ownership and leasing offers rather than sticker price; partner with EV review creators and solve home-charging for renters.",
+        ("social leasing", "small city EVs", "range-test creators"),
+    ),
+    _c(
+        "used-cars",
+        "Used Cars",
+        "mobility",
+        ("second-hand cars", "pre-owned cars", "first car", "used car"),
+        0.11,
+        190,
+        6.3,
+        {"marketplace": 52, "physical_store": 34, "brand_dtc": 14},
+        {"search": 30, "friends": 30, "youtube": 20, "tiktok": 10, "instagram": 6, "in_store": 4},
+        ("price", "quality", "convenience"),
+        ("insurance costs for young drivers", "fear of hidden faults"),
+        0.22,
+        0.80,
+        0.33,
+        0.03,
+        -0.25,
+        0.80,
+        "The first car is usually used, small and financed: Gen Z buyers research on marketplaces and YouTube, rely on family for the final check, and insurance often costs as much as the loan.",
+        "Bundle warranty, inspection reports and young-driver insurance into the offer; transparency beats price cuts in a low-trust category.",
+        ("online car marketplaces", "certified pre-owned", "young-driver insurance"),
     ),
     _c(
         "ride-hailing",
@@ -1222,8 +1266,8 @@ CATEGORIES: list[Category] = [
 
 BY_SLUG: dict[str, Category] = {c.slug: c for c in CATEGORIES}
 
-assert len(CATEGORIES) == 50, len(CATEGORIES)
-assert len(BY_SLUG) == 50
+assert len(CATEGORIES) == 52, len(CATEGORIES)
+assert len(BY_SLUG) == 52
 for _cat in CATEGORIES:
     assert _cat.group in GROUPS, _cat.slug
     assert set(_cat.channels) <= set(CHANNELS), _cat.slug

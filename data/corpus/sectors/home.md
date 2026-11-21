@@ -21,14 +21,14 @@ The Home & Living sector covers 5 categories in this panel: Home Decor, Housepla
 ## Category ranking by penetration
 
 1. Home Decor: 47% penetration, €22/month, +4.2% growth
-2. Candles & Home Fragrance: 38% penetration, €13/month, +6.7% growth
+2. Candles & Home Fragrance: 39% penetration, €13/month, +6.7% growth
 3. Small Kitchen Appliances: 31% penetration, €17/month, +3.3% growth
-4. Furniture: 26% penetration, €26/month, -4.8% growth
+4. Furniture: 27% penetration, €25/month, -4.8% growth
 5. Houseplants: 23% penetration, €12/month, -3.5% growth
 
 ## Channels
 
-Main purchase channel per category: Candles & Home Fragrance — Physical store (49%); Furniture — Physical store (37%); Home Decor — Physical store (33%); Houseplants — Physical store (65%); Small Kitchen Appliances — Marketplaces (Amazon, Zalando...) (47%).
+Main purchase channel per category: Candles & Home Fragrance — Physical store (47%); Furniture — Physical store (36%); Home Decor — Physical store (32%); Houseplants — Physical store (65%); Small Kitchen Appliances — Online marketplaces (48%).
 
 ## What drives purchase
 

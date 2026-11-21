@@ -16,20 +16,20 @@ synthetic: true
 
 ## Overview
 
-The Beauty & Personal Care sector covers 6 categories in this panel: Skincare, Color Cosmetics, Fragrance, Haircare, Men's Grooming, Nail Care. The most widely bought is Skincare (78% penetration), while Nail Care is the most niche (39%). The fastest-growing category is Fragrance (+14.8% spend), and the weakest is Color Cosmetics (+4.1%).
+The Beauty & Personal Care sector covers 6 categories in this panel: Skincare, Color Cosmetics, Fragrance, Haircare, Men's Grooming, Nail Care. The most widely bought is Skincare (78% penetration), while Nail Care is the most niche (40%). The fastest-growing category is Fragrance (+14.8% spend), and the weakest is Color Cosmetics (+4.1%).
 
 ## Category ranking by penetration
 
-1. Skincare: 78% penetration, €35/month, +9.5% growth
-2. Haircare: 71% penetration, €19/month, +6.2% growth
-3. Color Cosmetics: 65% penetration, €30/month, +4.1% growth
-4. Fragrance: 53% penetration, €28/month, +14.8% growth
+1. Skincare: 78% penetration, €36/month, +9.5% growth
+2. Haircare: 72% penetration, €19/month, +6.2% growth
+3. Color Cosmetics: 64% penetration, €30/month, +4.1% growth
+4. Fragrance: 54% penetration, €28/month, +14.8% growth
 5. Men's Grooming: 47% penetration, €22/month, +11.3% growth
-6. Nail Care: 39% penetration, €15/month, +7.9% growth
+6. Nail Care: 40% penetration, €15/month, +7.9% growth
 
 ## Channels
 
-Main purchase channel per category: Color Cosmetics — Physical store (31%); Fragrance — Physical store (36%); Haircare — Physical store (42%); Men's Grooming — Physical store (35%); Nail Care — Physical store (31%); Skincare — Physical store (29%).
+Main purchase channel per category: Color Cosmetics — Physical store (30%); Fragrance — Physical store (38%); Haircare — Physical store (42%); Men's Grooming — Physical store (35%); Nail Care — Physical store (31%); Skincare — Physical store (29%).
 
 ## What drives purchase
 

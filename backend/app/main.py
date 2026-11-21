@@ -6,6 +6,7 @@ import json
 import logging
 import time
 from contextlib import asynccontextmanager
+from functools import lru_cache
 from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException, Request
@@ -15,6 +16,7 @@ from sse_starlette.sse import EventSourceResponse
 
 from app.agent import ClaudeAnalyst
 from app.config import settings
+from app.corpus.catalog import GROUPS_FR
 from app.corpus.spec import BY_SLUG, CHANNELS, DISCOVERY, DRIVERS, GROUPS
 from app.offline import OfflineAnalyst
 from app.retrieval.index import get_retriever
@@ -54,6 +56,8 @@ class ChatMessage(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[ChatMessage] = Field(min_length=1, max_length=40)
+    category: str | None = Field(default=None, description="Optional category scope (slug)")
+    lang: Literal["en", "fr"] = "en"
 
 
 class SearchRequest(BaseModel):
@@ -117,8 +121,93 @@ def overview() -> dict[str, Any]:
     return {
         "respondents": store.n_respondents,
         "categories": kpis,
-        "groups": groups,
+        "groups": [{**g, "name_fr": GROUPS_FR[g["group"]]} for g in groups],
         "demographics": store.demographics(),
+    }
+
+
+@lru_cache(maxsize=1)
+def _products() -> list[dict[str, Any]]:
+    return get_store().product_stats()
+
+
+# Editorial picks for the storefront (the photos that read best at large sizes).
+HERO = ("live-events", "electric-vehicles", "fast-fashion", "specialty-coffee")
+SECTOR_COVER = {
+    "beauty": "color-cosmetics",
+    "fashion": "fast-fashion",
+    "food": "food-delivery",
+    "tech": "wireless-audio",
+    "entertainment": "live-events",
+    "wellness": "gym-fitness",
+    "home": "sleep-products",
+    "mobility": "used-cars",
+    "services": "bnpl",
+}
+
+
+@app.get("/api/home")
+def home() -> dict[str, Any]:
+    store = get_store()
+    kpis = store.category_kpis()
+    products = _products()
+    by_slug = {k["slug"]: k for k in kpis}
+    sectors = []
+    for g, name in GROUPS.items():
+        ks = sorted((k for k in kpis if k["group"] == g), key=lambda k: -k["penetration"])
+        sectors.append(
+            {
+                "group": g,
+                "name": name,
+                "name_fr": GROUPS_FR[g],
+                "categories": len(ks),
+                "image": by_slug[SECTOR_COVER[g]]["image"],
+                "top": [k["slug"] for k in ks[:3]],
+                "avg_growth": round(sum(k["yoy_growth"] for k in ks) / len(ks), 1),
+            }
+        )
+    trending = sorted((p for p in products if p["trend"] == "rising"), key=lambda p: -p["reach"])
+    rising = sorted(kpis, key=lambda k: -k["yoy_growth"])
+    popular = sorted(kpis, key=lambda k: -k["penetration"])
+    return {
+        "respondents": store.n_respondents,
+        "categories": len(kpis),
+        "products": len(products),
+        "documents": len(get_retriever().docs),
+        "sectors": sectors,
+        "trending_products": trending[:16],
+        "rising_categories": rising[:8],
+        "popular_categories": popular[:8],
+        "hero_categories": [by_slug[s] for s in HERO],
+        "spotlight": [k for k in kpis if k["group"] == "mobility"],
+    }
+
+
+@app.get("/api/products")
+def products(category: str | None = None) -> list[dict[str, Any]]:
+    return [p for p in _products() if category is None or p["category"] == category]
+
+
+@app.get("/api/products/{slug}")
+def product(slug: str) -> dict[str, Any]:
+    p = next((p for p in _products() if p["slug"] == slug), None)
+    if not p:
+        raise HTTPException(404, "Unknown product")
+    store = get_store()
+    by_age = [
+        r for r in store.query("product_mix", [p["category"]], breakdown="age_band").rows if r["option_key"] == slug
+    ]
+    by_country = [
+        r for r in store.query("product_mix", [p["category"]], breakdown="country").rows if r["option_key"] == slug
+    ]
+    hits = get_retriever().search(f"{p['name']} {p['category_name']}", k=4, categories=[p["category"]])
+    return {
+        "product": p,
+        "category": next(k for k in store.category_kpis() if k["slug"] == p["category"]),
+        "siblings": [x for x in _products() if x["category"] == p["category"] and x["slug"] != slug],
+        "share_by_age": by_age,
+        "share_by_country": by_country,
+        "passages": [h.to_dict() for h in hits],
     }
 
 
@@ -152,6 +241,8 @@ def category(slug: str) -> dict[str, Any]:
         "spend_by_country": q("avg_monthly_spend", "country"),
         "discovery_by_age": q("discovery_mix", "age_band"),
         "documents": docs,
+        "products": [p for p in _products() if p["category"] == slug],
+        "related": [k for k in store.category_kpis() if k["group"] == spec.group and k["slug"] != slug],
     }
 
 
@@ -219,11 +310,14 @@ def eval_report() -> dict[str, Any]:
 @app.post("/api/chat")
 async def chat(req: ChatRequest, request: Request):
     analyst = request.app.state.analyst
+    if isinstance(analyst, OfflineAnalyst):  # stateless per request (it holds the reply language)
+        analyst = OfflineAnalyst(request.app.state.toolbox)
     history = [m.model_dump() for m in req.messages]
+    scope = req.category if req.category in BY_SLUG else None
 
     async def gen():
         try:
-            async for event in analyst.run(history):
+            async for event in analyst.run(history, scope=scope, lang=req.lang):
                 if await request.is_disconnected():
                     break
                 yield {"data": json.dumps(event, ensure_ascii=False, default=str)}

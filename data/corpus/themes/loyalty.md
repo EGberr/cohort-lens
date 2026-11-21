@@ -20,25 +20,25 @@ Gen Z is often described as disloyal, but loyalty depends on the category. The a
 
 - Music Streaming: 76%
 - Smartphones: 72%
-- Period Care: 62%
-- Pet Care: 60%
-- Gaming Hardware: 60%
-- Investing Apps: 58%
-- Wearables: 56%
+- Period Care: 63%
+- Gaming Hardware: 62%
+- Pet Care: 61%
+- Investing Apps: 57%
+- Wearables: 54%
 - Mobile Gaming (In-app Purchases): 52%
-- Collectibles & Trading Cards: 49%
-- Gym & Fitness Memberships: 48%
+- Collectibles & Trading Cards: 50%
+- Wireless Audio: 49%
 
 ## Least loyal categories
 
 - Home Decor: 18%
+- Travel & Experiences: 20%
 - Fast Fashion Apparel: 20%
-- Travel & Experiences: 21%
-- Nail Care: 21%
-- Secondhand & Resale Fashion: 22%
-- Houseplants: 24%
-- Furniture: 24%
-- Bags & Accessories: 26%
+- Secondhand & Resale Fashion: 21%
+- Furniture: 21%
+- Nail Care: 22%
+- Color Cosmetics: 24%
+- Houseplants: 25%
 
 ## Implications
 

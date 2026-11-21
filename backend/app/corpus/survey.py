@@ -17,6 +17,7 @@ import duckdb
 import numpy as np
 
 from app.config import settings
+from app.corpus.catalog import BY_CATEGORY
 from app.corpus.spec import CATEGORIES, CHANNELS, DISCOVERY, DRIVERS, Category
 
 SEED = 2026
@@ -114,6 +115,7 @@ def simulate(out_dir: Path) -> tuple[Path, Path]:
                 "bought_dupe",
                 "brand_loyal",
                 "price_decisive",
+                "product",
             ]
         )
         for cat in CATEGORIES:
@@ -187,6 +189,10 @@ def _simulate_category(
         else:
             driver = driver_keys[int(rng.integers(len(driver_keys)))]
 
+        products = BY_CATEGORY[cat.slug]
+        pw = np.array([max(p.weight * (1 + 0.7 * p.age_skew * z), 0.05) for p in products])
+        product = products[int(rng.choice(len(products), p=pw / pw.sum()))].slug
+
         g = gender_sign[i]
         p_sust = cat.sustainability * (1 + 0.12 * g) * (1.15 if incomes[i] == "high" else 1.0)
         p_dupe = cat.dupe_rate * (1 + 0.15 * young - 0.1 * old)
@@ -203,6 +209,7 @@ def _simulate_category(
                 bool(rng.random() < min(p_dupe, 0.97)),
                 bool(rng.random() < cat.loyalty),
                 bool(rng.random() < min(p_price, 0.97)),
+                product,
             ]
         )
 

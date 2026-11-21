@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-Over the past year, 28% of the Gen Z panel purchased smart home, spending an average of €13 per month. The category is growing modestly (+2.1% spend vs the 2025 wave). For renters, smart home means mood lighting and plug-in devices rather than installed systems — it is a room-aesthetic purchase.
+Over the past year, 27% of the Gen Z panel purchased smart home, spending an average of €12 per month. The category is growing modestly (+2.1% spend vs the 2025 wave). For renters, smart home means mood lighting and plug-in devices rather than installed systems — it is a room-aesthetic purchase.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 28%
-- Average monthly spend among buyers: €13
-- Annualised spend per Gen Z consumer: €42
+- Penetration (bought in last 12 months): 27%
+- Average monthly spend among buyers: €12
+- Annualised spend per Gen Z consumer: €40
 - Spend growth vs 2025 wave: +2.1%
-- Buyers in panel: 1,672 of 6,000 respondents
+- Buyers in panel: 1,607 of 6,000 respondents
 
 ## Who buys
 
-Purchase is balanced by gender (women 29%, men 27%). It is an older-Gen Z category: penetration rises from 24% among 16-19 year-olds to 32% among 25-29 year-olds. By market, penetration is highest in Germany (34%) and lowest in Spain (20%). Buyers in the US spend the most (€15 per month). Among high-income respondents penetration reaches 32%, compared with 24% in the low-income band.
+Purchase is balanced by gender (women 26%, men 27%). It is an older-Gen Z category: penetration rises from 23% among 16-19 year-olds to 32% among 25-29 year-olds. By market, penetration is highest in France (29%) and lowest in Spain (19%). Buyers in the US spend the most (€15 per month). Among high-income respondents penetration reaches 31%, compared with 24% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (31% of buyers), followed by YouTube (22%) and Search engines (18%). TikTok accounts for 30% of first discoveries among 16-19 year-olds versus 32% among 25-29 year-olds, while search engines matter more for the older group (18% vs 16%).
+Discovery is led by TikTok (30% of buyers), followed by YouTube (21%) and Search engines (19%). TikTok accounts for 34% of first discoveries among 16-19 year-olds versus 25% among 25-29 year-olds, while search engines matter more for the older group (21% vs 17%).
 
-The main purchase channel is Marketplaces (Amazon, Zalando...) (55%), then Physical store (22%) and TikTok Shop (12%). Social commerce through TikTok Shop reaches 13% of purchases among the youngest buyers, against 12% among 25-29 year-olds.
+The main purchase channel is Online marketplaces (57%), then Physical store (22%) and TikTok Shop (12%). Social commerce through TikTok Shop reaches 14% of purchases among the youngest buyers, against 10% among 25-29 year-olds.
 
 ## Purchase drivers and barriers
 
-The top purchase driver is aesthetics & self-expression (42% of buyers cite it first), ahead of convenience (29%) and price / value for money (19%). Price is the decisive factor for 67% of buyers, 6 points above the panel average of 61%. The main barriers reported in open answers are renting / can't install and privacy.
+The top purchase driver is aesthetics & self-expression (40% of buyers cite it first), ahead of convenience (30%) and price / value for money (20%). Price is the decisive factor for 65% of buyers, 4 points above the panel average of 61%. The main barriers reported in open answers are renting / can't install and privacy.
 
 ## Values: sustainability, dupes and loyalty
 
-18% of buyers say they would pay more for a sustainable option (7 points below the panel average of 25%). 34% bought a dupe or lookalike product in the last year (17 points above the panel average of 17%), and 29% usually repurchase the same brand (10 points below the panel average of 39%).
+18% of buyers say they would pay more for a sustainable option (8 points below the panel average of 26%). 34% bought a dupe or lookalike product in the last year (18 points above the panel average of 17%), and 29% usually repurchase the same brand (9 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among smart home buyers, the most common product type is LED light strip (45% of buyers). LED light strip over-indexes with 16-19 year-olds (31% of its buyers), while Sunrise alarm clock skews older (50% aged 25-29).
+
+- **LED light strip**: 45% of category buyers, typical price €25, interest stable, mostly bought via Online marketplaces.
+- **Smart speaker**: 32% of category buyers, typical price €60, interest cooling, mostly bought via Online marketplaces.
+- **Sunrise alarm clock**: 23% of category buyers, typical price €50, interest rising, mostly bought via Online marketplaces.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is aesthetics & self-expression (42% of buyers cite it f
 
 Design renter-friendly, no-install products and market them as room makeovers rather than automation.
 
-- Prioritise TikTok for awareness: it is the first discovery source for 31% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 30% of buyers.
 - Build the offer around aesthetics & self-expression, the most-cited driver.
-- Plan conversion on Marketplaces (Amazon, Zalando...), which carries 55% of purchases.
+- Plan conversion on Online marketplaces, which carries 57% of purchases.

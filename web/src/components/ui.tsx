@@ -1,5 +1,8 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { cx } from "@/lib/format";
+import { useLang } from "@/lib/i18n";
 
 export function PageHeader({ eyebrow, title, children, actions }: { eyebrow?: string; title: ReactNode; children?: ReactNode; actions?: ReactNode }) {
   return (
@@ -67,11 +70,12 @@ export function Skeleton({ className }: { className?: string }) {
 }
 
 export function ErrorState({ message }: { message: string }) {
+  const { t } = useLang();
   return (
     <div className="card mx-auto mt-16 max-w-md p-6 text-center">
-      <p className="font-medium">Could not load data</p>
+      <p className="font-medium">{t("misc.loading_error")}</p>
       <p className="mt-1 text-[13px] text-muted">{message}</p>
-      <p className="mt-3 text-[12px] text-muted">Start the API with <code className="num rounded bg-surface-2 px-1">make api</code> and refresh.</p>
+      <p className="mt-3 text-[12px] text-muted">{t("misc.start_api")}</p>
     </div>
   );
 }

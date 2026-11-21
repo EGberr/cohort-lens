@@ -20,17 +20,17 @@ The Fashion & Accessories sector covers 7 categories in this panel: Fast Fashion
 
 ## Category ranking by penetration
 
-1. Fast Fashion Apparel: 68% penetration, €47/month, -6.4% growth
-2. Sneakers: 61% penetration, €41/month, +3.2% growth
+1. Fast Fashion Apparel: 68% penetration, €48/month, -6.4% growth
+2. Sneakers: 61% penetration, €39/month, +3.2% growth
 3. Secondhand & Resale Fashion: 58% penetration, €32/month, +21.7% growth
-4. Athleisure & Activewear: 57% penetration, €35/month, +8.8% growth
+4. Athleisure & Activewear: 56% penetration, €35/month, +8.8% growth
 5. Bags & Accessories: 44% penetration, €23/month, +2.6% growth
-6. Demi-fine Jewelry: 35% penetration, €26/month, +12.4% growth
+6. Demi-fine Jewelry: 37% penetration, €25/month, +12.4% growth
 7. Eyewear: 33% penetration, €20/month, +4.4% growth
 
 ## Channels
 
-Main purchase channel per category: Athleisure & Activewear — Brand website / app (32%); Bags & Accessories — Physical store (30%); Demi-fine Jewelry — Brand website / app (29%); Eyewear — Physical store (46%); Fast Fashion Apparel — Marketplaces (Amazon, Zalando...) (29%); Secondhand & Resale Fashion — Resale apps (Vinted, Depop...) (64%); Sneakers — Brand website / app (30%).
+Main purchase channel per category: Athleisure & Activewear — Brand website / app (33%); Bags & Accessories — Physical store (27%); Demi-fine Jewelry — Brand website / app (30%); Eyewear — Physical store (45%); Fast Fashion Apparel — Online marketplaces (29%); Secondhand & Resale Fashion — Resale apps (Vinted, Depop...) (64%); Sneakers — Brand website / app (31%).
 
 ## What drives purchase
 

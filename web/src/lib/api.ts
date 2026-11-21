@@ -13,8 +13,11 @@ export type Health = {
 export type CategoryKpi = {
   slug: string;
   name: string;
+  name_fr: string;
   group: string;
   group_name: string;
+  group_name_fr: string;
+  image: string;
   penetration: number;
   avg_monthly_spend: number;
   annual_spend_per_capita: number;
@@ -29,7 +32,7 @@ export type CategoryKpi = {
 export type Overview = {
   respondents: number;
   categories: CategoryKpi[];
-  groups: { group: string; name: string; categories: number; avg_penetration: number; annual_spend_per_capita: number; avg_growth: number }[];
+  groups: { group: string; name: string; name_fr: string; categories: number; avg_penetration: number; annual_spend_per_capita: number; avg_growth: number }[];
   demographics: Record<string, { segment: string | boolean; n: number }[]>;
 };
 
@@ -56,6 +59,53 @@ export type CategoryDetail = {
   spend_by_country: Row[];
   discovery_by_age: Row[];
   documents: { doc_id: string; title: string; type: string }[];
+  products: Product[];
+  related: CategoryKpi[];
+};
+
+export type Product = {
+  slug: string;
+  category: string;
+  category_name: string;
+  category_name_fr: string;
+  name: string;
+  name_fr: string;
+  image: string;
+  price: number;
+  per_month: boolean;
+  trend: "rising" | "steady" | "cooling";
+  buyers: number;
+  share_of_category: number;
+  reach: number;
+  avg_monthly_spend: number;
+  share_16_19: number;
+  share_25_29: number;
+  share_female: number;
+  dupe_rate: number;
+  brand_loyalty_rate: number;
+  top_channel: string;
+};
+
+export type Home = {
+  respondents: number;
+  categories: number;
+  products: number;
+  documents: number;
+  sectors: { group: string; name: string; name_fr: string; categories: number; image: string; top: string[]; avg_growth: number }[];
+  trending_products: Product[];
+  rising_categories: CategoryKpi[];
+  popular_categories: CategoryKpi[];
+  hero_categories: CategoryKpi[];
+  spotlight: CategoryKpi[];
+};
+
+export type ProductDetail = {
+  product: Product;
+  category: CategoryKpi;
+  siblings: Product[];
+  share_by_age: Row[];
+  share_by_country: Row[];
+  passages: SearchHit[];
 };
 
 export type DocSummary = { doc_id: string; title: string; type: string; categories: string[]; group?: string };
@@ -155,6 +205,8 @@ async function post<T>(path: string, body: unknown): Promise<T> {
 
 export const api = {
   health: () => get<Health>("/health"),
+  home: () => get<Home>("/home"),
+  product: (slug: string) => get<ProductDetail>(`/products/${slug}`),
   overview: () => get<Overview>("/overview"),
   category: (slug: string) => get<CategoryDetail>(`/categories/${slug}`),
   documents: () => get<DocSummary[]>("/documents"),
@@ -167,13 +219,14 @@ export const api = {
 export async function streamChat(
   messages: { role: "user" | "assistant"; content: string }[],
   onEvent: (e: StreamEvent) => void,
-  signal?: AbortSignal,
+  opts: { signal?: AbortSignal; category?: string; lang?: "en" | "fr" } = {},
 ): Promise<void> {
+  const { signal, category, lang } = opts;
   const base = process.env.NEXT_PUBLIC_API_URL ?? "";
   const res = await fetch(`${base}/api/chat`, {
     method: "POST",
     headers: { "content-type": "application/json", accept: "text/event-stream" },
-    body: JSON.stringify({ messages }),
+    body: JSON.stringify({ messages, category, lang }),
     signal,
   });
   if (!res.ok || !res.body) throw new Error(`Chat request failed (${res.status})`);

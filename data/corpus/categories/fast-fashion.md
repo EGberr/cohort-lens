@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-68% of Gen Z consumers bought fast fashion apparel in the last twelve months, spending an average of €47 per month. The category is in decline (-6.4% spend vs the 2025 wave). The 'say-do gap' is widest here: most buyers say fast fashion is harmful, yet it remains the largest apparel channel by volume — but spend is now declining as resale captures repeat purchases.
+68% of Gen Z consumers bought fast fashion apparel in the last twelve months, spending an average of €48 per month. The category is in decline (-6.4% spend vs the 2025 wave). The 'say-do gap' is widest here: most buyers say fast fashion is harmful, yet it remains the largest apparel channel by volume — but spend is now declining as resale captures repeat purchases.
 
 ## Market snapshot
 
 - Penetration (bought in last 12 months): 68%
-- Average monthly spend among buyers: €47
-- Annualised spend per Gen Z consumer: €389
+- Average monthly spend among buyers: €48
+- Annualised spend per Gen Z consumer: €395
 - Spend growth vs 2025 wave: -6.4%
-- Buyers in panel: 4,109 of 6,000 respondents
+- Buyers in panel: 4,100 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 76% of women bought versus 60% of men. Penetration is similar across age bands (16-19: 70%, 25-29: 68%). By market, penetration is highest in the UK (74%) and lowest in France (61%). Buyers in the US spend the most (€56 per month). Among high-income respondents penetration reaches 76%, compared with 65% in the low-income band.
+The category skews towards women: 75% of women bought versus 60% of men. It is driven by younger Gen Z: 72% of 16-19 year-olds bought, against 66% of 25-29 year-olds. By market, penetration is highest in Spain (73%) and lowest in Italy (59%). Buyers in the US spend the most (€59 per month). Among high-income respondents penetration reaches 75%, compared with 64% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (39% of buyers), followed by Instagram (26%) and Search engines (11%). TikTok accounts for 43% of first discoveries among 16-19 year-olds versus 36% among 25-29 year-olds, while search engines matter more for the older group (12% vs 9.0%).
+Discovery is led by TikTok (40% of buyers), followed by Instagram (26%) and Search engines (10%). TikTok accounts for 44% of first discoveries among 16-19 year-olds versus 37% among 25-29 year-olds, while search engines matter more for the older group (11% vs 9.0%).
 
-The main purchase channel is Marketplaces (Amazon, Zalando...) (29%), then Brand website / app (27%) and Physical store (21%). Social commerce through TikTok Shop reaches 17% of purchases among the youngest buyers, against 14% among 25-29 year-olds.
+The main purchase channel is Online marketplaces (29%), then Brand website / app (28%) and Physical store (21%). Social commerce through TikTok Shop reaches 16% of purchases among the youngest buyers, against 13% among 25-29 year-olds.
 
 ## Purchase drivers and barriers
 
-The top purchase driver is price / value for money (42% of buyers cite it first), ahead of novelty & trends (28%) and aesthetics & self-expression (19%). Price is the decisive factor for 82% of buyers, 21 points above the panel average of 61%. The main barriers reported in open answers are guilt about environmental impact and poor quality.
+The top purchase driver is price / value for money (42% of buyers cite it first), ahead of novelty & trends (29%) and aesthetics & self-expression (20%). Price is the decisive factor for 81% of buyers, 20 points above the panel average of 61%. The main barriers reported in open answers are guilt about environmental impact and poor quality.
 
 ## Values: sustainability, dupes and loyalty
 
-30% of buyers say they would pay more for a sustainable option (5 points above the panel average of 25%). 45% bought a dupe or lookalike product in the last year (27 points above the panel average of 17%), and 20% usually repurchase the same brand (19 points below the panel average of 39%).
+30% of buyers say they would pay more for a sustainable option (5 points above the panel average of 26%). 46% bought a dupe or lookalike product in the last year (29 points above the panel average of 17%), and 20% usually repurchase the same brand (19 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among fast fashion apparel buyers, the most common product type is Graphic T-shirt (39% of buyers). Graphic T-shirt over-indexes with 16-19 year-olds (31% of its buyers), while Wide-leg jeans skews older (36% aged 25-29).
+
+- **Graphic T-shirt**: 39% of category buyers, typical price €15, interest stable, mostly bought via Online marketplaces.
+- **Wide-leg jeans**: 34% of category buyers, typical price €35, interest rising, mostly bought via Online marketplaces.
+- **Going-out top**: 27% of category buyers, typical price €20, interest cooling, mostly bought via Online marketplaces.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is price / value for money (42% of buyers cite it first)
 
 Do not over-index on sustainability messaging the product cannot support; compete on fit, quality-per-euro and take-back programmes that feed resale.
 
-- Prioritise TikTok for awareness: it is the first discovery source for 39% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 40% of buyers.
 - Build the offer around price / value for money, the most-cited driver.
-- Plan conversion on Marketplaces (Amazon, Zalando...), which carries 29% of purchases.
+- Plan conversion on Online marketplaces, which carries 29% of purchases.

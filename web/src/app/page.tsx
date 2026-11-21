@@ -1,310 +1,265 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { ArrowUp, Database, FileText, PanelRightClose, PanelRightOpen, RotateCcw, Square } from "lucide-react";
-import { streamChat, type ChartSpec, type Dataset, type PassageSource, type StreamEvent } from "@/lib/api";
-import { cx } from "@/lib/format";
-import { Answer } from "@/components/chat/answer";
-import { EvidencePanel } from "@/components/chat/evidence";
-import { Trace, type ToolCall } from "@/components/chat/trace";
-import { ChartFromSpec } from "@/components/charts";
-import { DocReader } from "@/components/doc-reader";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Search, Sparkles } from "lucide-react";
+import { api, type Home } from "@/lib/api";
+import { cx, GROUP_COLORS } from "@/lib/format";
+import { useLang } from "@/lib/i18n";
+import { Photo } from "@/components/photo";
+import { CategoryCard, ProductCard } from "@/components/cards";
+import { ErrorState, Growth, Skeleton } from "@/components/ui";
 
-type AssistantMsg = {
-  id: string;
-  role: "assistant";
-  content: string;
-  status?: string;
-  running: boolean;
-  calls: ToolCall[];
-  sources: PassageSource[];
-  datasets: Dataset[];
-  charts: ChartSpec[];
-  meta?: { model: string; latency_ms: number; usage: Record<string, number>; mode: string };
-  error?: string;
+const ASK_SAMPLES = {
+  en: [
+    "Which skincare products do 16-19 year-olds buy?",
+    "Why do young drivers choose a used hybrid?",
+    "Where do Gen Z discover fragrance?",
+  ],
+  fr: [
+    "Quels soins du visage achètent les 16-19 ans ?",
+    "Pourquoi les jeunes conducteurs choisissent-ils une hybride d'occasion ?",
+    "Où la Gen Z découvre-t-elle les parfums ?",
+  ],
 };
-type UserMsg = { id: string; role: "user"; content: string };
-type Msg = UserMsg | AssistantMsg;
 
-const SUGGESTIONS = [
-  { tag: "Path to purchase", q: "Where does Gen Z discover and buy skincare, and how does it differ between 16-19 and 25-29 year-olds?" },
-  { tag: "Values", q: "Which categories show the biggest sustainability say-do gap among Gen Z?" },
-  { tag: "Compare", q: "Compare sneakers and athleisure: who buys them, where, and why?" },
-  { tag: "Dupe culture", q: "How big is dupe culture in beauty, and how should prestige brands respond?" },
-  { tag: "Markets", q: "Is resale fashion more popular in France than in Germany?" },
-  { tag: "Targeting", q: "Which fast-growing categories should a brand targeting young men prioritise?" },
-];
-
-const uid = () => Math.random().toString(36).slice(2, 10);
-
-export default function Page() {
+function SectionHead({ title, sub, href, cta }: { title: string; sub?: string; href?: string; cta?: string }) {
   return (
-    <Suspense fallback={<div className="h-screen" />}>
-      <AskPage />
-    </Suspense>
+    <div className="mb-5 flex items-end justify-between gap-4">
+      <div>
+        <h2 className="font-serif text-[30px] leading-tight tracking-tight sm:text-[36px]">{title}</h2>
+        {sub && <p className="mt-1 text-[13.5px] text-muted">{sub}</p>}
+      </div>
+      {href && (
+        <Link href={href} className="group hidden shrink-0 items-center gap-1 text-[13px] font-medium text-ink-2 hover:text-ink sm:flex">
+          {cta} <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
+        </Link>
+      )}
+    </div>
   );
 }
 
-function AskPage() {
-  const searchParams = useSearchParams();
-  const [messages, setMessages] = useState<Msg[]>([]);
-  // Prefilled from ?q= (links from category pages).
-  const [input, setInput] = useState(() => searchParams.get("q") ?? "");
-  const [busy, setBusy] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [activeCite, setActiveCite] = useState<string | null>(null);
-  const [panelOpen, setPanelOpen] = useState(true);
-  const [sheetOpen, setSheetOpen] = useState(false);
-  const [reader, setReader] = useState<{ docId: string; section?: string } | null>(null);
-  const abortRef = useRef<AbortController | null>(null);
-  const endRef = useRef<HTMLDivElement>(null);
-  const taRef = useRef<HTMLTextAreaElement>(null);
+function Rail({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const scroll = (dir: number) => ref.current?.scrollBy({ left: dir * ref.current.clientWidth * 0.8, behavior: "smooth" });
+  return (
+    <div className="relative">
+      <div ref={ref} className="scroll-thin -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:-mx-8 sm:px-8">
+        {children}
+      </div>
+      <div className="pointer-events-none absolute -top-14 right-0 hidden gap-2 sm:flex">
+        {[-1, 1].map((d) => (
+          <button
+            key={d}
+            aria-label={d < 0 ? "Previous" : "Next"}
+            onClick={() => scroll(d)}
+            className="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full border hairline bg-surface hover:border-line-strong"
+          >
+            {d < 0 ? <ChevronLeft size={16} /> : <ChevronRight size={16} />}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function HomePage() {
+  const { t, lang, pick } = useLang();
+  const router = useRouter();
+  const [data, setData] = useState<Home | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+  const [cats, setCats] = useState<{ slug: string; name: string; name_fr: string; image: string }[]>([]);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ block: "end", behavior: "smooth" });
-  }, [messages]);
-
-  useEffect(() => {
-    const ta = taRef.current;
-    if (!ta) return;
-    ta.style.height = "0px";
-    ta.style.height = `${Math.min(ta.scrollHeight, 180)}px`;
-  }, [input]);
-
-  const patch = useCallback((id: string, fn: (m: AssistantMsg) => AssistantMsg) => {
-    setMessages((ms) => ms.map((m) => (m.id === id && m.role === "assistant" ? fn(m) : m)));
+    api.home().then(setData).catch((e) => setError(String(e)));
+    api
+      .overview()
+      .then((o) => setCats(o.categories.map((c) => ({ slug: c.slug, name: c.name, name_fr: c.name_fr, image: c.image }))))
+      .catch(() => undefined);
   }, []);
 
-  const send = useCallback(
-    async (text: string) => {
-      const q = text.trim();
-      if (!q || busy) return;
-      const user: UserMsg = { id: uid(), role: "user", content: q };
-      const asst: AssistantMsg = { id: uid(), role: "assistant", content: "", running: true, calls: [], sources: [], datasets: [], charts: [], status: "Planning the analysis" };
-      const history = [...messages, user].map((m) => ({ role: m.role, content: m.content }));
-      setMessages((ms) => [...ms, user, asst]);
-      setSelected(asst.id);
-      setActiveCite(null);
-      setInput("");
-      setBusy(true);
-      const ctrl = new AbortController();
-      abortRef.current = ctrl;
-      const onEvent = (e: StreamEvent) => {
-        patch(asst.id, (m) => {
-          switch (e.type) {
-            case "status":
-              return { ...m, status: e.text };
-            case "text":
-              return { ...m, content: m.content + e.delta };
-            case "tool_call":
-              return { ...m, calls: [...m.calls, { id: e.id, name: e.name, input: e.input, is_error: e.is_error, summary: e.summary }] };
-            case "source":
-              return { ...m, sources: [...m.sources, e.source] };
-            case "dataset":
-              return { ...m, datasets: [...m.datasets, e.dataset] };
-            case "chart":
-              return { ...m, charts: [...m.charts, e.chart] };
-            case "done":
-              return { ...m, running: false, meta: { model: e.model, latency_ms: e.latency_ms, usage: e.usage, mode: e.mode } };
-            case "error":
-              return { ...m, running: false, error: e.message };
-          }
-        });
-      };
-      try {
-        await streamChat(history, onEvent, ctrl.signal);
-      } catch {
-        if (!ctrl.signal.aborted) patch(asst.id, (m) => ({ ...m, error: "Could not reach the analyst. Is the backend running on :8000?" }));
-      } finally {
-        patch(asst.id, (m) => ({ ...m, running: false }));
-        setBusy(false);
-        abortRef.current = null;
-      }
-    },
-    [busy, messages, patch],
-  );
+  const matches = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return cats.filter((c) => c.name.toLowerCase().includes(q) || c.name_fr.toLowerCase().includes(q)).slice(0, 5);
+  }, [query, cats]);
 
-  const stop = () => abortRef.current?.abort();
-  const reset = () => {
-    stop();
-    setMessages([]);
-    setSelected(null);
-  };
-
-  const current = messages.find((m) => m.id === selected && m.role === "assistant") as AssistantMsg | undefined;
-  const onCite = (msgId: string) => (id: string) => {
-    setSelected(msgId);
-    setActiveCite(id);
-    setPanelOpen(true);
-    if (window.matchMedia("(max-width: 1279px)").matches) setSheetOpen(true);
-  };
-
-  const empty = messages.length === 0;
+  if (error) return <ErrorState message={error} />;
+  const heroCats = data?.hero_categories ?? [];
 
   return (
-    <div className="flex h-[calc(100vh-3.5rem)] lg:h-screen">
-      <section className="flex min-w-0 flex-1 flex-col">
-        <header className="flex h-14 shrink-0 items-center justify-between border-b hairline px-5">
-          <div className="flex items-center gap-2 text-[13px]">
-            <span className="font-medium">Ask the analyst</span>
-            <span className="hidden text-muted sm:inline">· grounded in 65 reports and a 6,000-respondent panel</span>
-          </div>
-          <div className="flex items-center gap-1">
-            {!empty && (
-              <button onClick={reset} className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[12.5px] text-muted hover:bg-surface-2 hover:text-ink">
-                <RotateCcw size={14} /> New
-              </button>
-            )}
-            <button onClick={() => setPanelOpen((o) => !o)} className="hidden rounded-lg p-2 text-muted hover:bg-surface-2 hover:text-ink xl:block" aria-label="Toggle evidence panel">
-              {panelOpen ? <PanelRightClose size={16} /> : <PanelRightOpen size={16} />}
-            </button>
-          </div>
-        </header>
+    <div className="mx-auto max-w-[1320px] px-5 sm:px-8">
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="grid items-center gap-10 pb-16 pt-10 lg:grid-cols-[1.05fr_1fr] lg:pt-16">
+        <div>
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border hairline bg-surface px-3 py-1 text-[11.5px] text-muted">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-ink" /> {t("home.eyebrow")}
+          </p>
+          <h1 className="font-serif text-[48px] leading-[0.98] tracking-tight sm:text-[72px]">
+            {t("home.title_a")} <em className="highlight not-italic">{t("home.title_b")}</em> {t("home.title_c")}
+          </h1>
+          <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-ink-2">{t("home.subtitle")}</p>
 
-        <div className="scroll-thin flex-1 overflow-y-auto">
-          {empty ? (
-            <div className="mx-auto flex max-w-3xl flex-col px-5 pb-10 pt-14 sm:pt-24">
-              <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border hairline bg-surface px-3 py-1 text-[11.5px] text-muted">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent-ink" /> Agentic RAG · 50 categories · 6 markets
-              </p>
-              <h1 className="font-serif text-[44px] leading-[1.02] tracking-tight sm:text-[60px]">
-                What does Gen Z <em className="highlight not-italic">actually</em> buy — and why?
-              </h1>
-              <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-2">
-                Ask in plain language. The analyst searches the research library, runs exact queries on the survey panel, and answers with every number cited back to its source.
-              </p>
-              <div className="mt-10 grid gap-2.5 sm:grid-cols-2">
-                {SUGGESTIONS.map((s) => (
-                  <button
-                    key={s.q}
-                    onClick={() => send(s.q)}
-                    className="card group flex flex-col gap-1.5 p-4 text-left transition-all hover:-translate-y-0.5 hover:border-line-strong"
-                  >
-                    <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-accent-ink">{s.tag}</span>
-                    <span className="text-[13.5px] leading-snug text-ink-2 group-hover:text-ink">{s.q}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="mx-auto flex max-w-3xl flex-col gap-8 px-5 py-8">
-              {messages.map((m) =>
-                m.role === "user" ? (
-                  <div key={m.id} className="flex justify-end">
-                    <p className="max-w-[85%] rounded-2xl rounded-br-md bg-ink px-4 py-2.5 text-[14.5px] leading-relaxed text-bg">{m.content}</p>
-                  </div>
-                ) : (
-                  <article key={m.id} onClick={() => setSelected(m.id)} className={cx("rounded-2xl transition-colors", selected === m.id && messages.length > 2 && "")}>
-                    <Trace calls={m.calls} status={m.status} running={m.running && !m.content} />
-                    {m.content && <Answer text={m.content} streaming={m.running} activeCite={selected === m.id ? activeCite : null} onCite={onCite(m.id)} />}
-                    {m.charts.length > 0 && (
-                      <div className="mt-4 grid gap-3">
-                        {m.charts.map((c) => (
-                          <ChartFromSpec key={c.id} spec={c} />
-                        ))}
-                      </div>
-                    )}
-                    {m.error && <p className="mt-3 rounded-xl border border-negative/30 bg-negative/5 px-3 py-2 text-[13px] text-negative">{m.error}</p>}
-                    {m.meta && (
-                      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11.5px] text-muted">
-                        <button onClick={() => { setSelected(m.id); setPanelOpen(true); if (window.matchMedia("(max-width: 1279px)").matches) setSheetOpen(true); }} className="flex items-center gap-1 hover:text-ink">
-                          <Database size={12} /> {m.datasets.length} datasets
-                        </button>
-                        <button onClick={() => { setSelected(m.id); setPanelOpen(true); if (window.matchMedia("(max-width: 1279px)").matches) setSheetOpen(true); }} className="flex items-center gap-1 hover:text-ink">
-                          <FileText size={12} /> {m.sources.length} passages
-                        </button>
-                        <span className="num">{(m.meta.latency_ms / 1000).toFixed(1)}s</span>
-                        <span>{m.meta.mode === "claude" ? m.meta.model : "offline analyst"}</span>
-                        {m.meta.usage?.input_tokens ? (
-                          <span className="num">
-                            {(m.meta.usage.input_tokens + (m.meta.usage.cache_read_input_tokens ?? 0)).toLocaleString("en-GB")} in · {m.meta.usage.output_tokens.toLocaleString("en-GB")} out
-                          </span>
-                        ) : null}
-                      </div>
-                    )}
-                  </article>
-                ),
-              )}
-              <div ref={endRef} className="h-4" />
-            </div>
-          )}
-        </div>
-
-        <div className="shrink-0 px-5 pb-5">
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              send(input);
+              if (matches[0] && matches[0].name.toLowerCase() === query.trim().toLowerCase()) router.push(`/categories/${matches[0].slug}`);
+              else if (query.trim()) router.push(`/ask?q=${encodeURIComponent(query.trim())}`);
             }}
-            className="card mx-auto flex max-w-3xl items-end gap-2 p-2 pl-4 focus-within:border-line-strong"
+            className="relative mt-8 max-w-xl"
           >
-            <textarea
-              ref={taRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
-                  send(input);
-                }
-              }}
-              rows={1}
-              placeholder="Ask about a category, a segment or a market…"
-              className="max-h-[180px] flex-1 resize-none bg-transparent py-2 text-[14.5px] outline-none placeholder:text-muted"
-            />
-            {busy ? (
-              <button type="button" onClick={stop} aria-label="Stop" className="flex h-9 w-9 items-center justify-center rounded-xl bg-surface-3 text-ink hover:brightness-95">
-                <Square size={13} fill="currentColor" />
+            <label className="card flex items-center gap-3 p-2 pl-4 focus-within:border-line-strong">
+              <Search size={18} className="shrink-0 text-muted" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={t("home.search")}
+                aria-label={t("home.search")}
+                className="min-w-0 flex-1 bg-transparent py-2 text-[15px] outline-none placeholder:text-muted"
+              />
+              <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-xl bg-ink px-4 text-[13px] font-medium text-bg">
+                <Sparkles size={14} /> {t("nav.ask")}
               </button>
-            ) : (
-              <button type="submit" disabled={!input.trim()} aria-label="Send" className="flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-bg transition-opacity disabled:opacity-25">
-                <ArrowUp size={16} />
-              </button>
+            </label>
+            {matches.length > 0 && (
+              <ul className="card absolute inset-x-0 top-[calc(100%+6px)] z-20 overflow-hidden p-1.5">
+                {matches.map((m) => (
+                  <li key={m.slug}>
+                    <Link href={`/categories/${m.slug}`} className="flex items-center gap-3 rounded-xl p-2 hover:bg-surface-2">
+                      <Photo src={m.image} alt="" className="h-10 w-10 shrink-0" rounded="rounded-lg" sizes="40px" />
+                      <span className="text-[14px]">{lang === "fr" ? m.name_fr : m.name}</span>
+                      <ArrowUpRight size={15} className="ml-auto text-muted" />
+                    </Link>
+                  </li>
+                ))}
+                <li className="px-2 pb-1 pt-2 text-[11.5px] text-muted">{t("home.search_hint")}</li>
+              </ul>
             )}
           </form>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-[11px] text-muted">Demo data is synthetic. Numbers are cited: [D#] survey datasets, [S#] research passages.</p>
+
+          <dl className="mt-10 grid max-w-xl grid-cols-4 gap-4">
+            {[
+              [data?.categories, t("home.stats.categories")],
+              [data?.products, t("home.stats.products")],
+              [data?.respondents.toLocaleString("en-GB"), t("home.stats.respondents")],
+              [data?.documents, t("home.stats.reports")],
+            ].map(([v, label]) => (
+              <div key={String(label)}>
+                <dt className="num text-[24px] font-semibold leading-none">{v ?? "—"}</dt>
+                <dd className="mt-1 text-[12px] text-muted">{label}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {heroCats.length
+            ? heroCats.map((c, i) => (
+                <Link key={c.slug} href={`/categories/${c.slug}`} className={cx("group relative block", i % 2 === 1 && "translate-y-8")}>
+                  <Photo src={c.image} alt={pick(c, "name")} className="aspect-[3/4]" priority sizes="(max-width: 1024px) 45vw, 300px" />
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-3 right-3 text-[14px] font-medium text-white">{pick(c, "name")}</span>
+                </Link>
+              ))
+            : Array.from({ length: 4 }).map((_, i) => <Skeleton key={i} className={cx("aspect-[3/4]", i % 2 === 1 && "translate-y-8")} />)}
         </div>
       </section>
 
-      {panelOpen && (
-        <aside className="scroll-thin hidden w-[380px] shrink-0 overflow-y-auto border-l hairline bg-bg p-4 xl:block">
-          <div className="mb-3 flex items-center justify-between">
-            <h3 className="text-[13px] font-medium">Evidence</h3>
-            {current && <span className="text-[11px] text-muted">{current.datasets.length + current.sources.length} items</span>}
-          </div>
-          <EvidencePanel
-            sources={current?.sources ?? []}
-            datasets={current?.datasets ?? []}
-            active={activeCite}
-            onOpenDoc={(docId, section) => setReader({ docId, section })}
-          />
-        </aside>
-      )}
-      {sheetOpen && current && (
-        <div className="fixed inset-0 z-40 xl:hidden" role="dialog" aria-modal="true">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setSheetOpen(false)} />
-          <div className="scroll-thin absolute inset-x-0 bottom-0 max-h-[78vh] overflow-y-auto rounded-t-3xl border-t hairline bg-bg p-4 pb-8">
-            <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-surface-3" />
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-[13px] font-medium">Evidence</h3>
-              <button onClick={() => setSheetOpen(false)} className="text-[12px] text-muted hover:text-ink">
-                Close
-              </button>
+      {/* ── Sectors ─────────────────────────────────────────────────────── */}
+      <section className="pt-10">
+        <SectionHead title={t("home.sectors")} sub={t("home.sectors_sub")} href="/categories" cta={t("home.see_all")} />
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {data
+            ? data.sectors.map((s, i) => (
+                <Link
+                  key={s.group}
+                  href={`/categories?sector=${s.group}`}
+                  className={cx("group relative block overflow-hidden rounded-2xl", i === 0 && "col-span-2 row-span-2 lg:col-span-2")}
+                >
+                  <Photo src={s.image} alt={pick(s, "name")} className={cx("h-full", i === 0 ? "min-h-[280px]" : "aspect-[4/3]")} sizes="(max-width: 640px) 50vw, 260px" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+                    <span className="mb-2 block h-1 w-8 rounded-full" style={{ background: GROUP_COLORS[s.group] }} />
+                    <h3 className={cx("font-medium tracking-tight", i === 0 ? "text-[24px]" : "text-[15px]")}>{pick(s, "name")}</h3>
+                    <p className="text-[12px] text-white/75">
+                      {s.categories} {t("home.categories_n")}
+                    </p>
+                  </div>
+                </Link>
+              ))
+            : Array.from({ length: 9 }).map((_, i) => <Skeleton key={i} className={cx("aspect-[4/3]", i === 0 && "col-span-2 row-span-2")} />)}
+        </div>
+      </section>
+
+      {/* ── Trending products ────────────────────────────────────────────── */}
+      <section className="pt-20">
+        <SectionHead title={t("home.trending")} sub={t("home.trending_sub")} />
+        <Rail>
+          {data
+            ? data.trending_products.map((p) => <ProductCard key={p.slug} p={p} className="w-[220px] shrink-0 snap-start sm:w-[250px]" />)
+            : Array.from({ length: 6 }).map((_, i) => <Skeleton key={i} className="aspect-[4/5] w-[250px] shrink-0" />)}
+        </Rail>
+      </section>
+
+      {/* ── Ask band ─────────────────────────────────────────────────────── */}
+      <section className="pt-20">
+        <div className="relative overflow-hidden rounded-3xl bg-ink px-6 py-10 text-bg sm:px-12 sm:py-14">
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent opacity-80 blur-3xl" />
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-[11.5px] font-medium uppercase tracking-[0.16em] opacity-60">Claude · RAG · DuckDB</p>
+              <h2 className="mt-3 font-serif text-[38px] leading-[1.02] sm:text-[48px]">{t("home.ask_title")}</h2>
+              <p className="mt-3 max-w-md text-[14.5px] leading-relaxed opacity-75">{t("home.ask_sub")}</p>
             </div>
-            <EvidencePanel
-              sources={current.sources}
-              datasets={current.datasets}
-              active={activeCite}
-              onOpenDoc={(docId, section) => {
-                setSheetOpen(false);
-                setReader({ docId, section });
-              }}
-            />
+            <div className="flex flex-col gap-2.5">
+              {ASK_SAMPLES[lang].map((q) => (
+                <Link
+                  key={q}
+                  href={`/ask?q=${encodeURIComponent(q)}`}
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-[14px] transition-colors hover:bg-white/10 dark:border-black/15 dark:bg-black/5"
+                >
+                  {q}
+                  <ArrowRight size={16} className="shrink-0 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      )}
-      <DocReader docId={reader?.docId ?? null} section={reader?.section} onClose={() => setReader(null)} />
+      </section>
+
+      {/* ── Rising categories ───────────────────────────────────────────── */}
+      <section className="pt-20">
+        <SectionHead title={t("home.rising")} sub={t("home.rising_sub")} href="/categories" cta={t("home.see_all")} />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {data
+            ? data.rising_categories.map((c) => <CategoryCard key={c.slug} c={c} />)
+            : Array.from({ length: 8 }).map((_, i) => <Skeleton key={i} className="aspect-[5/4]" />)}
+        </div>
+      </section>
+
+      {/* ── Cars spotlight ──────────────────────────────────────────────── */}
+      <section className="pt-20">
+        <SectionHead title={t("home.cars")} sub={t("home.cars_sub")} href="/categories?sector=mobility" cta={t("home.see_all")} />
+        <div className="grid gap-4 md:grid-cols-2">
+          {data?.spotlight.slice(0, 2).map((c) => <CategoryCard key={c.slug} c={c} size="lg" />)}
+        </div>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {data?.spotlight.slice(2).map((c) => (
+            <Link key={c.slug} href={`/categories/${c.slug}`} className="card group flex items-center gap-4 p-3 hover:border-line-strong">
+              <Photo src={c.image} alt={pick(c, "name")} className="h-20 w-28 shrink-0" rounded="rounded-xl" sizes="112px" />
+              <div className="min-w-0">
+                <p className="text-[15px] font-medium">{pick(c, "name")}</p>
+                <p className="mt-1 flex items-center gap-2 text-[12.5px] text-muted">
+                  <span className="num text-ink">{c.penetration.toFixed(0)}%</span> {t("cats.bought")} <Growth value={c.yoy_growth} />
+                </p>
+              </div>
+              <ArrowUpRight size={18} className="ml-auto text-muted group-hover:text-ink" />
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

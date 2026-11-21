@@ -26,25 +26,33 @@ synthetic: true
 - Average monthly spend among buyers: €28
 - Annualised spend per Gen Z consumer: €68
 - Spend growth vs 2025 wave: +12.9%
-- Buyers in panel: 1,227 of 6,000 respondents
+- Buyers in panel: 1,211 of 6,000 respondents
 
 ## Who buys
 
-Purchase is balanced by gender (women 18%, men 22%). Penetration is similar across age bands (16-19: 19%, 25-29: 21%). By market, penetration is highest in Spain (23%) and lowest in Germany (18%). Buyers in the US spend the most (€35 per month). Among high-income respondents penetration reaches 25%, compared with 18% in the low-income band.
+The category skews towards men: 22% of men bought versus 18% of women. Penetration is similar across age bands (16-19: 18%, 25-29: 22%). By market, penetration is highest in Germany (24%) and lowest in the UK (17%). Buyers in the US spend the most (€32 per month). Among high-income respondents penetration reaches 24%, compared with 17% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by YouTube (37% of buyers), followed by TikTok (30%) and Search engines (14%). TikTok accounts for 33% of first discoveries among 16-19 year-olds versus 28% among 25-29 year-olds, while search engines matter more for the older group (15% vs 14%).
+Discovery is led by YouTube (41% of buyers), followed by TikTok (27%) and Search engines (14%). TikTok accounts for 30% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (15% vs 14%).
 
-The main purchase channel is Marketplaces (Amazon, Zalando...) (51%), then Brand website / app (15%) and Physical store (14%). Social commerce through TikTok Shop reaches 10% of purchases among the youngest buyers, against 7.5% among 25-29 year-olds.
+The main purchase channel is Online marketplaces (49%), then Physical store (16%) and Brand website / app (15%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is performance & specs (39% of buyers cite it first), ahead of creator recommendation (31%) and price / value for money (18%). Price is the decisive factor for 56% of buyers, 5 points below the panel average of 61%. The main barriers reported in open answers are learning curve and price.
+The top purchase driver is performance & specs (41% of buyers cite it first), ahead of creator recommendation (30%) and price / value for money (19%). Price is the decisive factor for 57% of buyers, 4 points below the panel average of 61%. The main barriers reported in open answers are learning curve and price.
 
 ## Values: sustainability, dupes and loyalty
 
-13% of buyers say they would pay more for a sustainable option (12 points below the panel average of 25%). 20% bought a dupe or lookalike product in the last year (3 points above the panel average of 17%), and 45% usually repurchase the same brand (6 points above the panel average of 39%).
+11% of buyers say they would pay more for a sustainable option (15 points below the panel average of 26%). 20% bought a dupe or lookalike product in the last year (4 points above the panel average of 17%), and 47% usually repurchase the same brand (8 points above the panel average of 39%).
+
+## Products Gen Z buys
+
+Among creator gear buyers, the most common product type is Wireless microphone (38% of buyers). Ring light over-indexes with 16-19 year-olds (28% of its buyers), while Wireless microphone skews older (43% aged 25-29).
+
+- **Wireless microphone**: 38% of category buyers, typical price €150, interest rising, mostly bought via Online marketplaces.
+- **Compact digital camera**: 32% of category buyers, typical price €300, interest rising, mostly bought via Online marketplaces.
+- **Ring light**: 30% of category buyers, typical price €40, interest cooling, mostly bought via Online marketplaces.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is performance & specs (39% of buyers cite it first), ah
 
 Sell kits by creator use case (vlogging, podcasting, streaming) and partner with creator education channels.
 
-- Prioritise YouTube for awareness: it is the first discovery source for 37% of buyers.
+- Prioritise YouTube for awareness: it is the first discovery source for 41% of buyers.
 - Build the offer around performance & specs, the most-cited driver.
-- Plan conversion on Marketplaces (Amazon, Zalando...), which carries 51% of purchases.
+- Plan conversion on Online marketplaces, which carries 49% of purchases.

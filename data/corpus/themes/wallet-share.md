@@ -14,25 +14,26 @@ synthetic: true
 
 ## Summary
 
-Ranked by annual spend per Gen Z consumer, Travel & Experiences (€414 a year) and Fast Fashion Apparel (€389) take the largest share of wallet. Growth is concentrated in experiences, resale and wellness.
+Ranked by annual spend per Gen Z consumer, Travel & Experiences (€419 a year) and Fast Fashion Apparel (€395) take the largest share of wallet. Growth is concentrated in experiences, resale and wellness.
 
 ## Largest share of wallet (annual spend per consumer)
 
-- Travel & Experiences: €414
-- Fast Fashion Apparel: €389
-- Food Delivery: €360
-- Skincare: €330
-- Sneakers: €297
-- Specialty Coffee: €260
-- Buy Now, Pay Later: €241
-- Athleisure & Activewear: €237
-- Color Cosmetics: €232
-- Investing Apps: €226
-- Secondhand & Resale Fashion: €224
-- Smartphones: €222
+- Travel & Experiences: €419
+- Fast Fashion Apparel: €395
+- Food Delivery: €376
+- Skincare: €334
+- Used Cars: €292
+- Sneakers: €288
+- Electric Vehicles: €283
+- Specialty Coffee: €267
+- Buy Now, Pay Later: €243
+- Investing Apps: €235
+- Athleisure & Activewear: €231
+- Color Cosmetics: €230
 
 ## Fastest-growing categories
 
+- Electric Vehicles: +24.5%
 - Secondhand & Resale Fashion: +21.7%
 - Collectibles & Trading Cards: +19.8%
 - Low & No Alcohol: +18.2%
@@ -42,7 +43,6 @@ Ranked by annual spend per Gen Z consumer, Travel & Experiences (€414 a year) 
 - Live Events & Concerts: +13.6%
 - Creator Gear: +12.9%
 - Demi-fine Jewelry: +12.4%
-- Supplements: +12.1%
 
 ## Declining categories
 

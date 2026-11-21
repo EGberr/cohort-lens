@@ -14,37 +14,45 @@ synthetic: true
 
 > **Synthetic data notice.** This report is part of a fictional demo corpus generated for Cohort Lens. Figures come from a simulated panel and must not be used for real decisions.
 
-*Also covers: Netflix, SVOD, streaming services, TV subscriptions. Sector: Entertainment & Media.*
+*Also covers: Netflix, SVOD, streaming services, TV subscriptions. Sector: Entertainment & Experiences.*
 
 ## Executive summary
 
-Over the past year, 72% of the Gen Z panel purchased video streaming, spending an average of €18 per month. The category is broadly flat (-0.9% spend vs the 2025 wave). Gen Z 'churns and returns': they subscribe for a show and cancel after, which makes ad-supported tiers and bundles the fastest-growing plans.
+Over the past year, 71% of the Gen Z panel purchased video streaming, spending an average of €17 per month. The category is broadly flat (-0.9% spend vs the 2025 wave). Gen Z 'churns and returns': they subscribe for a show and cancel after, which makes ad-supported tiers and bundles the fastest-growing plans.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 72%
-- Average monthly spend among buyers: €18
-- Annualised spend per Gen Z consumer: €154
+- Penetration (bought in last 12 months): 71%
+- Average monthly spend among buyers: €17
+- Annualised spend per Gen Z consumer: €148
 - Spend growth vs 2025 wave: -0.9%
-- Buyers in panel: 4,323 of 6,000 respondents
+- Buyers in panel: 4,254 of 6,000 respondents
 
 ## Who buys
 
-Purchase is balanced by gender (women 73%, men 71%). It is an older-Gen Z category: penetration rises from 69% among 16-19 year-olds to 75% among 25-29 year-olds. By market, penetration is highest in the UK (81%) and lowest in Spain (62%). Buyers in the US spend the most (€21 per month). Among high-income respondents penetration reaches 76%, compared with 69% in the low-income band.
+Purchase is balanced by gender (women 72%, men 70%). It is an older-Gen Z category: penetration rises from 67% among 16-19 year-olds to 74% among 25-29 year-olds. By market, penetration is highest in Italy (78%) and lowest in France (65%). Buyers in the US spend the most (€21 per month). Among high-income respondents penetration reaches 75%, compared with 67% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by Friends & family (30% of buyers), followed by TikTok (25%) and YouTube (16%). TikTok accounts for 28% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (12% vs 9.5%).
+Discovery is led by Friends & family (30% of buyers), followed by TikTok (26%) and YouTube (16%). TikTok accounts for 28% of first discoveries among 16-19 year-olds versus 24% among 25-29 year-olds, while search engines matter more for the older group (11% vs 7.8%).
 
-The main purchase channel is Subscription (90%), then Brand website / app (10%).
+The main purchase channel is Subscription (90%), then Brand website / app (9.8%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is novelty & trends (40% of buyers cite it first), ahead of price / value for money (31%) and convenience (19%). Price is the decisive factor for 73% of buyers, 12 points above the panel average of 61%. The main barriers reported in open answers are too many subscriptions and price increases.
+The top purchase driver is novelty & trends (42% of buyers cite it first), ahead of price / value for money (29%) and convenience (18%). Price is the decisive factor for 72% of buyers, 11 points above the panel average of 61%. The main barriers reported in open answers are too many subscriptions and price increases.
 
 ## Values: sustainability, dupes and loyalty
 
-5.2% of buyers say they would pay more for a sustainable option (20 points below the panel average of 25%). 3.1% bought a dupe or lookalike product in the last year (14 points below the panel average of 17%), and 34% usually repurchase the same brand (5 points below the panel average of 39%).
+5.2% of buyers say they would pay more for a sustainable option (21 points below the panel average of 26%). 3.1% bought a dupe or lookalike product in the last year (14 points below the panel average of 17%), and 35% usually repurchase the same brand (3 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among video streaming buyers, the most common product type is Ad-supported plan (43% of buyers). Ad-supported plan over-indexes with 16-19 year-olds (30% of its buyers), while Premium plan skews older (40% aged 25-29).
+
+- **Ad-supported plan**: 43% of category buyers, typical price €7/month, interest rising, mostly bought via Subscription.
+- **Premium plan**: 33% of category buyers, typical price €18/month, interest cooling, mostly bought via Subscription.
+- **Streaming bundle**: 24% of category buyers, typical price €22/month, interest rising, mostly bought via Subscription.
 
 ## Trends to watch
 

@@ -14,20 +14,20 @@ synthetic: true
 
 ## Summary
 
-Buying a 'dupe' — a cheaper lookalike of a popular product — is now normal. Across categories an average of 17% of buyers bought one in the last year, rising to 59% in color cosmetics.
+Buying a 'dupe' — a cheaper lookalike of a popular product — is now normal. Across categories an average of 17% of buyers bought one in the last year, rising to 60% in color cosmetics.
 
 ## Categories with the highest dupe rates
 
-- Color Cosmetics: 59% bought a dupe
-- Bags & Accessories: 48% bought a dupe
-- Fast Fashion Apparel: 45% bought a dupe
+- Color Cosmetics: 60% bought a dupe
+- Bags & Accessories: 49% bought a dupe
+- Fast Fashion Apparel: 46% bought a dupe
 - Skincare: 42% bought a dupe
 - Fragrance: 39% bought a dupe
 - Athleisure & Activewear: 38% bought a dupe
-- Nail Care: 36% bought a dupe
-- Demi-fine Jewelry: 34% bought a dupe
+- Nail Care: 37% bought a dupe
+- Demi-fine Jewelry: 36% bought a dupe
 - Smart Home: 34% bought a dupe
-- Haircare: 34% bought a dupe
+- Haircare: 33% bought a dupe
 
 ## Implications
 

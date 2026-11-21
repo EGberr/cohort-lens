@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-45% of Gen Z consumers bought gym & fitness memberships in the last twelve months, spending an average of €38 per month. The category is growing solidly (+9.9% spend vs the 2025 wave). Gym-going has become a social identity for Gen Z; budget gyms and boutique classes grow at the expense of mid-priced clubs.
+44% of Gen Z consumers bought gym & fitness memberships in the last twelve months, spending an average of €40 per month. The category is growing solidly (+9.9% spend vs the 2025 wave). Gym-going has become a social identity for Gen Z; budget gyms and boutique classes grow at the expense of mid-priced clubs.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 45%
-- Average monthly spend among buyers: €38
-- Annualised spend per Gen Z consumer: €206
+- Penetration (bought in last 12 months): 44%
+- Average monthly spend among buyers: €40
+- Annualised spend per Gen Z consumer: €211
 - Spend growth vs 2025 wave: +9.9%
-- Buyers in panel: 2,683 of 6,000 respondents
+- Buyers in panel: 2,640 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 47% of women bought versus 43% of men. It is an older-Gen Z category: penetration rises from 40% among 16-19 year-olds to 51% among 25-29 year-olds. By market, penetration is highest in Italy (50%) and lowest in the UK (39%). Buyers in the US spend the most (€47 per month). Among high-income respondents penetration reaches 54%, compared with 40% in the low-income band.
+Purchase is balanced by gender (women 45%, men 42%). It is an older-Gen Z category: penetration rises from 40% among 16-19 year-olds to 50% among 25-29 year-olds. By market, penetration is highest in the UK (49%) and lowest in Spain (39%). Buyers in the US spend the most (€48 per month). Among high-income respondents penetration reaches 52%, compared with 39% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by Friends & family (32% of buyers), followed by TikTok (26%) and Instagram (23%). TikTok accounts for 29% of first discoveries among 16-19 year-olds versus 24% among 25-29 year-olds, while search engines matter more for the older group (12% vs 9.1%).
+Discovery is led by Friends & family (32% of buyers), followed by TikTok (27%) and Instagram (21%). TikTok accounts for 32% of first discoveries among 16-19 year-olds versus 24% among 25-29 year-olds, while search engines matter more for the older group (12% vs 11%).
 
 The main purchase channel is Subscription (74%), then Brand website / app (22%) and Physical store (4.0%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is health benefits (41% of buyers cite it first), ahead of community & belonging (29%) and price / value for money (19%). Price is the decisive factor for 57% of buyers, 4 points below the panel average of 61%. The main barriers reported in open answers are membership price and gym intimidation.
+The top purchase driver is health benefits (41% of buyers cite it first), ahead of community & belonging (30%) and price / value for money (19%). Price is the decisive factor for 58% of buyers, 3 points below the panel average of 61%. The main barriers reported in open answers are membership price and gym intimidation.
 
 ## Values: sustainability, dupes and loyalty
 
-9.8% of buyers say they would pay more for a sustainable option (16 points below the panel average of 25%). 2.4% bought a dupe or lookalike product in the last year (15 points below the panel average of 17%), and 48% usually repurchase the same brand (9 points above the panel average of 39%).
+11% of buyers say they would pay more for a sustainable option (15 points below the panel average of 26%). 2.2% bought a dupe or lookalike product in the last year (15 points below the panel average of 17%), and 48% usually repurchase the same brand (10 points above the panel average of 39%).
+
+## Products Gen Z buys
+
+Among gym & fitness memberships buyers, the most common product type is Budget gym membership (55% of buyers). Budget gym membership over-indexes with 16-19 year-olds (29% of its buyers), while Pilates class pack skews older (44% aged 25-29).
+
+- **Budget gym membership**: 55% of category buyers, typical price €25/month, interest rising, mostly bought via Subscription.
+- **Pilates class pack**: 24% of category buyers, typical price €120, interest rising, mostly bought via Subscription.
+- **Boutique studio membership**: 21% of category buyers, typical price €90/month, interest stable, mostly bought via Subscription.
 
 ## Trends to watch
 

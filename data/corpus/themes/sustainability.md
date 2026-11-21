@@ -14,28 +14,28 @@ synthetic: true
 
 ## Summary
 
-On average 25% of buyers say they would pay a premium for a sustainable option, but willingness varies strongly by category. Fast fashion illustrates the gap: it still reaches 68% of Gen Z although only 30% of its buyers would pay more for sustainability.
+On average 26% of buyers say they would pay a premium for a sustainable option, but willingness varies strongly by category. Fast fashion illustrates the gap: it still reaches 68% of Gen Z although only 30% of its buyers would pay more for sustainability.
 
 ## Highest willingness to pay for sustainability
 
-- Secondhand & Resale Fashion: 65%
-- Plant-based Food: 55%
+- Secondhand & Resale Fashion: 66%
+- Plant-based Food: 56%
+- Electric Vehicles: 55%
 - Period Care: 53%
 - Skincare: 48%
-- Demi-fine Jewelry: 42%
-- Micromobility: 41%
+- Micromobility: 42%
+- Demi-fine Jewelry: 41%
+- Specialty Coffee: 39%
 - Houseplants: 39%
-- Specialty Coffee: 38%
-- Haircare: 38%
-- Pet Care: 36%
+- Pet Care: 38%
 
 ## Lowest willingness to pay
 
-- Mobile Gaming (In-app Purchases): 4.3%
-- Buy Now, Pay Later: 5.1%
+- Mobile Gaming (In-app Purchases): 3.9%
+- Buy Now, Pay Later: 4.7%
 - Video Streaming: 5.2%
-- Mental Wellness Apps: 5.9%
-- Music Streaming: 6.4%
+- Music Streaming: 6.1%
+- Mental Wellness Apps: 6.8%
 
 ## Implications
 

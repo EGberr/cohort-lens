@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-Over the past year, 61% of the Gen Z panel purchased sneakers, spending an average of €41 per month. The category is growing modestly (+3.2% spend vs the 2025 wave). Hype is cooling: 'quiet' running and terrace silhouettes are replacing limited drops, and comfort now ranks above resale value as a reason to buy.
+Over the past year, 61% of the Gen Z panel purchased sneakers, spending an average of €39 per month. The category is growing modestly (+3.2% spend vs the 2025 wave). Hype is cooling: 'quiet' running and terrace silhouettes are replacing limited drops, and comfort now ranks above resale value as a reason to buy.
 
 ## Market snapshot
 
 - Penetration (bought in last 12 months): 61%
-- Average monthly spend among buyers: €41
-- Annualised spend per Gen Z consumer: €297
+- Average monthly spend among buyers: €39
+- Annualised spend per Gen Z consumer: €288
 - Spend growth vs 2025 wave: +3.2%
-- Buyers in panel: 3,653 of 6,000 respondents
+- Buyers in panel: 3,670 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards men: 68% of men bought versus 54% of women. It is an older-Gen Z category: penetration rises from 56% among 16-19 year-olds to 65% among 25-29 year-olds. By market, penetration is highest in the UK (72%) and lowest in Italy (52%). Buyers in the US spend the most (€50 per month). Among high-income respondents penetration reaches 70%, compared with 56% in the low-income band.
+The category skews towards men: 70% of men bought versus 53% of women. Penetration is similar across age bands (16-19: 61%, 25-29: 62%). By market, penetration is highest in France (67%) and lowest in Germany (58%). Buyers in the US spend the most (€47 per month). Among high-income respondents penetration reaches 70%, compared with 57% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (28% of buyers), followed by Instagram (24%) and YouTube (16%). TikTok accounts for 30% of first discoveries among 16-19 year-olds versus 28% among 25-29 year-olds, while search engines matter more for the older group (7.1% vs 5.5%).
+Discovery is led by TikTok (30% of buyers), followed by Instagram (24%) and YouTube (16%). TikTok accounts for 31% of first discoveries among 16-19 year-olds versus 30% among 25-29 year-olds, while search engines matter more for the older group (6.1% vs 5.9%).
 
-The main purchase channel is Brand website / app (30%), then Physical store (29%) and Marketplaces (Amazon, Zalando...) (19%).
+The main purchase channel is Brand website / app (31%), then Physical store (29%) and Online marketplaces (20%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is brand identity & values (41% of buyers cite it first), ahead of exclusivity & drops (30%) and quality & durability (20%). Price is the decisive factor for 48% of buyers, 13 points below the panel average of 61%. The main barriers reported in open answers are resale prices on hyped pairs and fakes.
+The top purchase driver is brand identity & values (42% of buyers cite it first), ahead of exclusivity & drops (28%) and quality & durability (20%). Price is the decisive factor for 48% of buyers, 13 points below the panel average of 61%. The main barriers reported in open answers are resale prices on hyped pairs and fakes.
 
 ## Values: sustainability, dupes and loyalty
 
-28% of buyers say they would pay more for a sustainable option (in line with the panel average of 25%). 24% bought a dupe or lookalike product in the last year (7 points above the panel average of 17%), and 44% usually repurchase the same brand (5 points above the panel average of 39%).
+27% of buyers say they would pay more for a sustainable option (in line with the panel average of 26%). 23% bought a dupe or lookalike product in the last year (6 points above the panel average of 17%), and 46% usually repurchase the same brand (7 points above the panel average of 39%).
+
+## Products Gen Z buys
+
+Among sneakers buyers, the most common product type is Everyday running shoe (42% of buyers). Limited-edition drop over-indexes with 16-19 year-olds (33% of its buyers), while Everyday running shoe skews older (40% aged 25-29).
+
+- **Everyday running shoe**: 42% of category buyers, typical price €110, interest rising, mostly bought via Brand website / app.
+- **Terrace sneaker**: 39% of category buyers, typical price €95, interest rising, mostly bought via Brand website / app.
+- **Limited-edition drop**: 20% of category buyers, typical price €180, interest cooling, mostly bought via Brand website / app.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is brand identity & values (41% of buyers cite it first)
 
 Shift from scarcity marketing to everyday performance and comfort storytelling; reward loyalty with early access rather than raffles.
 
-- Prioritise TikTok for awareness: it is the first discovery source for 28% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 30% of buyers.
 - Build the offer around brand identity & values, the most-cited driver.
-- Plan conversion on Brand website / app, which carries 30% of purchases.
+- Plan conversion on Brand website / app, which carries 31% of purchases.

@@ -15,6 +15,7 @@ from typing import Any, Literal
 import duckdb
 
 from app.config import settings
+from app.corpus.catalog import CATEGORY_FR, GROUPS_FR, PRODUCT_BY_SLUG, PRODUCTS
 from app.corpus.spec import BY_SLUG, CHANNELS, DISCOVERY, DRIVERS, GROUPS
 
 Metric = Literal[
@@ -24,6 +25,7 @@ Metric = Literal[
     "channel_mix",
     "discovery_mix",
     "driver_mix",
+    "product_mix",
     "sustainable_premium_rate",
     "dupe_rate",
     "brand_loyalty_rate",
@@ -38,6 +40,7 @@ METRICS: dict[str, str] = {
     "channel_mix": "Share of buyers by main purchase channel",
     "discovery_mix": "Share of buyers by where they first discovered the product",
     "driver_mix": "Share of buyers by top purchase driver",
+    "product_mix": "Share of buyers by product type bought most often",
     "sustainable_premium_rate": "Share of buyers willing to pay more for a sustainable option",
     "dupe_rate": "Share of buyers who bought a dupe / lookalike product",
     "brand_loyalty_rate": "Share of buyers who repurchase the same brand",
@@ -61,6 +64,7 @@ MIX_COLUMNS = {
     "channel_mix": ("channel", CHANNELS),
     "discovery_mix": ("discovery", DISCOVERY),
     "driver_mix": ("top_driver", DRIVERS),
+    "product_mix": ("product", {p.slug: p.name for p in PRODUCTS}),
 }
 LOW_BASE = 80
 
@@ -251,6 +255,9 @@ class SurveyStore:
                     "name": spec.name,
                     "group": spec.group,
                     "group_name": GROUPS[spec.group],
+                    "name_fr": CATEGORY_FR[spec.slug],
+                    "group_name_fr": GROUPS_FR[spec.group],
+                    "image": f"/img/categories/{spec.slug}.webp",
                     "penetration": round(r["buyers"] / self.n_respondents * 100, 1),
                     "avg_monthly_spend": round(r["avg_spend"], 1),
                     "annual_spend_per_capita": round(r["buyers"] * r["avg_spend"] * 12 / self.n_respondents, 1),
@@ -263,6 +270,61 @@ class SurveyStore:
                 }
             )
         order = {c.slug: i for i, c in enumerate(BY_SLUG.values())}
+        return sorted(out, key=lambda r: order[r["slug"]])
+
+    def product_stats(self, category: str | None = None) -> list[dict[str, Any]]:
+        """Per product type: share of category buyers, spend, age/gender profile and top channel."""
+        where, params = ("WHERE category = ?", [category]) if category else ("", [])
+        rows = self._rows(
+            f"""
+            WITH base AS (SELECT category, count(*) AS cat_buyers FROM panel {where} GROUP BY category),
+            ch AS (
+                SELECT product, channel, count(*) AS c,
+                       row_number() OVER (PARTITION BY product ORDER BY count(*) DESC) AS rk
+                FROM panel {where} GROUP BY product, channel
+            )
+            SELECT p.product, p.category, count(*) AS buyers, any_value(b.cat_buyers) AS cat_buyers,
+                   avg(p.monthly_spend_eur) AS avg_spend,
+                   avg(CASE WHEN p.age_band = '16-19' THEN 1.0 ELSE 0 END) AS share_16_19,
+                   avg(CASE WHEN p.age_band = '25-29' THEN 1.0 ELSE 0 END) AS share_25_29,
+                   avg(CASE WHEN p.gender = 'female' THEN 1.0 ELSE 0 END) AS share_female,
+                   avg(CAST(p.bought_dupe AS DOUBLE)) AS dupe,
+                   avg(CAST(p.brand_loyal AS DOUBLE)) AS loyal,
+                   any_value(ch.channel) AS top_channel
+            FROM panel p JOIN base b USING (category) LEFT JOIN ch ON ch.product = p.product AND ch.rk = 1
+            {where.replace("category", "p.category")}
+            GROUP BY p.product, p.category
+            """,
+            params * 3,
+        )
+        out = []
+        for r in rows:
+            prod = PRODUCT_BY_SLUG[r["product"]]
+            out.append(
+                {
+                    "slug": prod.slug,
+                    "category": prod.category,
+                    "name": prod.name,
+                    "name_fr": prod.name_fr,
+                    "image": f"/img/products/{prod.slug}.webp",
+                    "category_name": BY_SLUG[prod.category].name,
+                    "category_name_fr": CATEGORY_FR[prod.category],
+                    "price": prod.price,
+                    "per_month": prod.per_month,
+                    "trend": prod.trend,
+                    "buyers": int(r["buyers"]),
+                    "share_of_category": round(r["buyers"] / r["cat_buyers"] * 100, 1),
+                    "reach": round(r["buyers"] / self.n_respondents * 100, 1),
+                    "avg_monthly_spend": round(r["avg_spend"], 1),
+                    "share_16_19": round(r["share_16_19"] * 100, 1),
+                    "share_25_29": round(r["share_25_29"] * 100, 1),
+                    "share_female": round(r["share_female"] * 100, 1),
+                    "dupe_rate": round(r["dupe"] * 100, 1),
+                    "brand_loyalty_rate": round(r["loyal"] * 100, 1),
+                    "top_channel": CHANNELS.get(r["top_channel"], r["top_channel"]),
+                }
+            )
+        order = {p.slug: i for i, p in enumerate(PRODUCTS)}
         return sorted(out, key=lambda r: order[r["slug"]])
 
     def top_option(self, metric: str, category: str, **filters: Any) -> dict[str, Any]:

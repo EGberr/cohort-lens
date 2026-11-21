@@ -6,6 +6,7 @@ import { api, type CategoryKpi, type Overview } from "@/lib/api";
 import { CHART_COLORS, eur, pct, signed } from "@/lib/format";
 import { CompareRadar } from "@/components/charts";
 import { ErrorState, PageHeader, Panel, Skeleton } from "@/components/ui";
+import { useLang } from "@/lib/i18n";
 
 const RADAR = [
   { key: "penetration", label: "Penetration" },
@@ -27,6 +28,8 @@ const ROWS: { key: keyof CategoryKpi; label: string; fmt: (v: number) => string 
 ];
 
 export default function ComparePage() {
+  const { lang, pick } = useLang();
+  const fr = lang === "fr";
   const [data, setData] = useState<Overview | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [picked, setPicked] = useState<string[]>(["sneakers", "athleisure", "secondhand-fashion"]);
@@ -46,15 +49,17 @@ export default function ComparePage() {
 
   return (
     <div className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8">
-      <PageHeader eyebrow="Side by side" title="Compare categories">
-        Pick up to four categories to compare reach, spend, growth and the values that shape Gen Z purchase decisions.
+      <PageHeader eyebrow={fr ? "Côte à côte" : "Side by side"} title={fr ? "Comparer des catégories" : "Compare categories"}>
+        {fr
+          ? "Choisissez jusqu'à quatre catégories pour comparer portée, dépenses, croissance et valeurs d'achat de la Gen Z."
+          : "Pick up to four categories to compare reach, spend, growth and the values that shape Gen Z purchase decisions."}
       </PageHeader>
 
       <div className="flex flex-wrap items-center gap-2">
         {selected.map((c, i) => (
           <span key={c.slug} className="flex items-center gap-2 rounded-full border hairline bg-surface py-1.5 pl-3 pr-1.5 text-[13px]">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: CHART_COLORS[i] }} />
-            {c.name}
+            {pick(c, "name")}
             <button aria-label={`Remove ${c.name}`} onClick={() => setPicked((p) => p.filter((s) => s !== c.slug))} className="rounded-full p-0.5 text-muted hover:bg-surface-2 hover:text-ink">
               <X size={13} />
             </button>
@@ -69,14 +74,14 @@ export default function ComparePage() {
               className="bg-transparent outline-none"
               aria-label="Add category"
             >
-              <option value="">Add category</option>
+              <option value="">{fr ? "Ajouter une catégorie" : "Add category"}</option>
               {data.groups.map((g) => (
                 <optgroup key={g.group} label={g.name}>
                   {data.categories
                     .filter((c) => c.group === g.group && !picked.includes(c.slug))
                     .map((c) => (
                       <option key={c.slug} value={c.slug}>
-                        {c.name}
+                        {pick(c, "name")}
                       </option>
                     ))}
                 </optgroup>
@@ -92,10 +97,10 @@ export default function ComparePage() {
         <p className="mt-16 text-center text-[13px] text-muted">Add a category to start comparing.</p>
       ) : (
         <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_1fr]">
-          <Panel title="Value profile" subtitle="Share of all respondents (penetration) or of buyers (other axes)">
-            <CompareRadar data={radarData} series={selected.map((c) => ({ key: c.slug, name: c.name }))} />
+          <Panel title={fr ? "Profil de valeurs" : "Value profile"} subtitle={fr ? "Part de tous les répondants (pénétration) ou des acheteurs (autres axes)" : "Share of all respondents (penetration) or of buyers (other axes)"}>
+            <CompareRadar data={radarData} series={selected.map((c) => ({ key: c.slug, name: pick(c, "name") }))} />
           </Panel>
-          <Panel title="Scorecard" subtitle="Best value per row is highlighted">
+          <Panel title={fr ? "Tableau comparatif" : "Scorecard"} subtitle={fr ? "La meilleure valeur de chaque ligne est surlignée" : "Best value per row is highlighted"}>
             <div className="overflow-x-auto">
               <table className="w-full text-[13px]">
                 <thead>
@@ -105,7 +110,7 @@ export default function ComparePage() {
                       <th key={c.slug} className="pb-2 text-right font-medium">
                         <span className="inline-flex items-start justify-end gap-1.5 pl-3">
                           <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full" style={{ background: CHART_COLORS[i] }} />
-                          <span>{c.name}</span>
+                          <span>{pick(c, "name")}</span>
                         </span>
                       </th>
                     ))}

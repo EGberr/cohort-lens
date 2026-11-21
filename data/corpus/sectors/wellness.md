@@ -16,20 +16,20 @@ synthetic: true
 
 ## Overview
 
-The Health & Wellness sector covers 6 categories in this panel: Gym & Fitness Memberships, Supplements, Mental Wellness Apps, Sleep Products, Period Care, Oral Care. The most widely bought is Oral Care (56% penetration), while Mental Wellness Apps is the most niche (19%). The fastest-growing category is Sleep Products (+15.2% spend), and the weakest is Period Care (+4.6%).
+The Health & Wellness sector covers 6 categories in this panel: Gym & Fitness Memberships, Supplements, Mental Wellness Apps, Sleep Products, Period Care, Oral Care. The most widely bought is Oral Care (55% penetration), while Mental Wellness Apps is the most niche (19%). The fastest-growing category is Sleep Products (+15.2% spend), and the weakest is Period Care (+4.6%).
 
 ## Category ranking by penetration
 
-1. Oral Care: 56% penetration, €10/month, +5.8% growth
-2. Gym & Fitness Memberships: 45% penetration, €38/month, +9.9% growth
+1. Oral Care: 55% penetration, €10/month, +5.8% growth
+2. Gym & Fitness Memberships: 44% penetration, €40/month, +9.9% growth
 3. Period Care: 43% penetration, €9/month, +4.6% growth
-4. Supplements: 41% penetration, €26/month, +12.1% growth
-5. Sleep Products: 26% penetration, €13/month, +15.2% growth
-6. Mental Wellness Apps: 19% penetration, €12/month, +6.8% growth
+4. Supplements: 42% penetration, €25/month, +12.1% growth
+5. Sleep Products: 26% penetration, €14/month, +15.2% growth
+6. Mental Wellness Apps: 19% penetration, €11/month, +6.8% growth
 
 ## Channels
 
-Main purchase channel per category: Gym & Fitness Memberships — Subscription (74%); Mental Wellness Apps — Subscription (89%); Oral Care — Physical store (57%); Period Care — Physical store (62%); Sleep Products — Marketplaces (Amazon, Zalando...) (42%); Supplements — Marketplaces (Amazon, Zalando...) (38%).
+Main purchase channel per category: Gym & Fitness Memberships — Subscription (74%); Mental Wellness Apps — Subscription (88%); Oral Care — Physical store (57%); Period Care — Physical store (60%); Sleep Products — Online marketplaces (40%); Supplements — Online marketplaces (37%).
 
 ## What drives purchase
 

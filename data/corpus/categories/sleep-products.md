@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-26% of Gen Z consumers bought sleep products in the last twelve months, spending an average of €13 per month. The category is one of the fastest-growing categories in the panel (+15.2% spend vs the 2025 wave). 'Sleepmaxxing' turned sleep into a routine of products — masks, mouth tape, magnesium drinks — mostly discovered through viral TikTok routines.
+26% of Gen Z consumers bought sleep products in the last twelve months, spending an average of €14 per month. The category is one of the fastest-growing categories in the panel (+15.2% spend vs the 2025 wave). 'Sleepmaxxing' turned sleep into a routine of products — masks, mouth tape, magnesium drinks — mostly discovered through viral TikTok routines.
 
 ## Market snapshot
 
 - Penetration (bought in last 12 months): 26%
-- Average monthly spend among buyers: €13
+- Average monthly spend among buyers: €14
 - Annualised spend per Gen Z consumer: €42
 - Spend growth vs 2025 wave: +15.2%
-- Buyers in panel: 1,553 of 6,000 respondents
+- Buyers in panel: 1,554 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 32% of women bought versus 19% of men. It is an older-Gen Z category: penetration rises from 22% among 16-19 year-olds to 30% among 25-29 year-olds. By market, penetration is highest in Spain (32%) and lowest in France (18%). Buyers in the US spend the most (€16 per month). Among high-income respondents penetration reaches 31%, compared with 22% in the low-income band.
+The category skews towards women: 31% of women bought versus 20% of men. It is an older-Gen Z category: penetration rises from 22% among 16-19 year-olds to 28% among 25-29 year-olds. By market, penetration is highest in Italy (34%) and lowest in the UK (19%). Buyers in the US spend the most (€17 per month). Among high-income respondents penetration reaches 30%, compared with 23% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (44% of buyers), followed by Instagram (16%) and YouTube (12%). TikTok accounts for 51% of first discoveries among 16-19 year-olds versus 41% among 25-29 year-olds, while search engines matter more for the older group (13% vs 9.4%).
+Discovery is led by TikTok (45% of buyers), followed by YouTube (15%) and Instagram (14%). TikTok accounts for 44% of first discoveries among 16-19 year-olds versus 45% among 25-29 year-olds, while search engines matter more for the older group (13% vs 9.5%).
 
-The main purchase channel is Marketplaces (Amazon, Zalando...) (42%), then Physical store (24%) and TikTok Shop (17%). Social commerce through TikTok Shop reaches 19% of purchases among the youngest buyers, against 16% among 25-29 year-olds.
+The main purchase channel is Online marketplaces (40%), then Physical store (25%) and TikTok Shop (19%). Social commerce through TikTok Shop reaches 24% of purchases among the youngest buyers, against 18% among 25-29 year-olds.
 
 ## Purchase drivers and barriers
 
-The top purchase driver is health benefits (40% of buyers cite it first), ahead of creator recommendation (30%) and novelty & trends (17%). Price is the decisive factor for 61% of buyers, in line with the panel average of 61%. The main barriers reported in open answers are questionable trends and price.
+The top purchase driver is health benefits (42% of buyers cite it first), ahead of creator recommendation (27%) and novelty & trends (20%). Price is the decisive factor for 62% of buyers, in line with the panel average of 61%. The main barriers reported in open answers are questionable trends and price.
 
 ## Values: sustainability, dupes and loyalty
 
-16% of buyers say they would pay more for a sustainable option (10 points below the panel average of 25%). 22% bought a dupe or lookalike product in the last year (5 points above the panel average of 17%), and 27% usually repurchase the same brand (11 points below the panel average of 39%).
+15% of buyers say they would pay more for a sustainable option (11 points below the panel average of 26%). 21% bought a dupe or lookalike product in the last year (4 points above the panel average of 17%), and 26% usually repurchase the same brand (12 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among sleep products buyers, the most common product type is Silk sleep mask (43% of buyers). Mouth tape over-indexes with 16-19 year-olds (28% of its buyers), while Magnesium night drink skews older (42% aged 25-29).
+
+- **Silk sleep mask**: 43% of category buyers, typical price €20, interest rising, mostly bought via Online marketplaces.
+- **Magnesium night drink**: 34% of category buyers, typical price €18, interest rising, mostly bought via Online marketplaces.
+- **Mouth tape**: 24% of category buyers, typical price €12, interest cooling, mostly bought via Online marketplaces.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is health benefits (40% of buyers cite it first), ahead 
 
 Ride sleep routines with evidence-led products and bundle them into a nightly ritual.
 
-- Prioritise TikTok for awareness: it is the first discovery source for 44% of buyers.
+- Prioritise TikTok for awareness: it is the first discovery source for 45% of buyers.
 - Build the offer around health benefits, the most-cited driver.
-- Plan conversion on Marketplaces (Amazon, Zalando...), which carries 42% of purchases.
+- Plan conversion on Online marketplaces, which carries 40% of purchases.

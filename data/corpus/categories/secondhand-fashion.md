@@ -24,27 +24,35 @@ synthetic: true
 
 - Penetration (bought in last 12 months): 58%
 - Average monthly spend among buyers: €32
-- Annualised spend per Gen Z consumer: €224
+- Annualised spend per Gen Z consumer: €223
 - Spend growth vs 2025 wave: +21.7%
-- Buyers in panel: 3,495 of 6,000 respondents
+- Buyers in panel: 3,478 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 68% of women bought versus 48% of men. It is an older-Gen Z category: penetration rises from 55% among 16-19 year-olds to 61% among 25-29 year-olds. By market, penetration is highest in France (66%) and lowest in Germany (46%). Buyers in the US spend the most (€40 per month). Among high-income respondents penetration reaches 66%, compared with 55% in the low-income band.
+The category skews towards women: 66% of women bought versus 49% of men. It is an older-Gen Z category: penetration rises from 53% among 16-19 year-olds to 61% among 25-29 year-olds. By market, penetration is highest in France (69%) and lowest in the UK (48%). Buyers in the US spend the most (€38 per month). Among high-income respondents penetration reaches 65%, compared with 53% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (32% of buyers), followed by Friends & family (21%) and Instagram (18%). TikTok accounts for 34% of first discoveries among 16-19 year-olds versus 31% among 25-29 year-olds, while search engines matter more for the older group (16% vs 13%).
+Discovery is led by TikTok (32% of buyers), followed by Friends & family (22%) and Instagram (17%). TikTok accounts for 36% of first discoveries among 16-19 year-olds versus 30% among 25-29 year-olds, while search engines matter more for the older group (17% vs 13%).
 
-The main purchase channel is Resale apps (Vinted, Depop...) (64%), then Physical store (16%) and Instagram Shopping (9.1%).
+The main purchase channel is Resale apps (Vinted, Depop...) (64%), then Physical store (18%) and Instagram Shopping (7.7%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is price / value for money (40% of buyers cite it first), ahead of sustainability (29%) and exclusivity & drops (20%). Price is the decisive factor for 70% of buyers, 9 points above the panel average of 61%. The main barriers reported in open answers are hygiene concerns and time spent searching.
+The top purchase driver is price / value for money (42% of buyers cite it first), ahead of sustainability (29%) and exclusivity & drops (19%). Price is the decisive factor for 71% of buyers, 10 points above the panel average of 61%. The main barriers reported in open answers are hygiene concerns and time spent searching.
 
 ## Values: sustainability, dupes and loyalty
 
-65% of buyers say they would pay more for a sustainable option (40 points above the panel average of 25%). 13% bought a dupe or lookalike product in the last year (4 points below the panel average of 17%), and 22% usually repurchase the same brand (17 points below the panel average of 39%).
+66% of buyers say they would pay more for a sustainable option (40 points above the panel average of 26%). 12% bought a dupe or lookalike product in the last year (5 points below the panel average of 17%), and 21% usually repurchase the same brand (17 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among secondhand & resale fashion buyers, the most common product type is Thrifted denim (43% of buyers). Thrifted denim over-indexes with 16-19 year-olds (29% of its buyers), while Pre-loved designer piece skews older (46% aged 25-29).
+
+- **Thrifted denim**: 43% of category buyers, typical price €22, interest rising, mostly bought via Resale apps (Vinted, Depop...).
+- **Vintage jacket**: 38% of category buyers, typical price €40, interest rising, mostly bought via Resale apps (Vinted, Depop...).
+- **Pre-loved designer piece**: 20% of category buyers, typical price €120, interest stable, mostly bought via Resale apps (Vinted, Depop...).
 
 ## Trends to watch
 

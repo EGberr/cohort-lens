@@ -24,27 +24,35 @@ Over the past year, 47% of the Gen Z panel purchased men's grooming, spending an
 
 - Penetration (bought in last 12 months): 47%
 - Average monthly spend among buyers: €22
-- Annualised spend per Gen Z consumer: €125
+- Annualised spend per Gen Z consumer: €124
 - Spend growth vs 2025 wave: +11.3%
 - Buyers in panel: 2,839 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards men: 66% of men bought versus 30% of women. It is an older-Gen Z category: penetration rises from 43% among 16-19 year-olds to 52% among 25-29 year-olds. By market, penetration is highest in the UK (49%) and lowest in Spain (46%). Buyers in the US spend the most (€26 per month). Among high-income respondents penetration reaches 54%, compared with 42% in the low-income band.
+The category skews towards men: 66% of men bought versus 30% of women. It is an older-Gen Z category: penetration rises from 43% among 16-19 year-olds to 51% among 25-29 year-olds. By market, penetration is highest in Germany (52%) and lowest in the UK (43%). Buyers in the US spend the most (€26 per month). Among high-income respondents penetration reaches 52%, compared with 42% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by TikTok (32% of buyers), followed by YouTube (26%) and Friends & family (13%). TikTok accounts for 35% of first discoveries among 16-19 year-olds versus 30% among 25-29 year-olds, while search engines matter more for the older group (14% vs 12%).
+Discovery is led by TikTok (32% of buyers), followed by YouTube (24%) and Search engines (14%). TikTok accounts for 37% of first discoveries among 16-19 year-olds versus 29% among 25-29 year-olds, while search engines matter more for the older group (16% vs 12%).
 
-The main purchase channel is Physical store (35%), then Marketplaces (Amazon, Zalando...) (28%) and Brand website / app (12%). Social commerce through TikTok Shop reaches 14% of purchases among the youngest buyers, against 9.4% among 25-29 year-olds.
+The main purchase channel is Physical store (35%), then Online marketplaces (25%) and TikTok Shop (13%). Social commerce through TikTok Shop reaches 14% of purchases among the youngest buyers, against 11% among 25-29 year-olds.
 
 ## Purchase drivers and barriers
 
-The top purchase driver is performance & specs (42% of buyers cite it first), ahead of convenience (28%) and creator recommendation (18%). Price is the decisive factor for 60% of buyers, in line with the panel average of 61%. The main barriers reported in open answers are stigma around skincare and confusing product choice.
+The top purchase driver is performance & specs (42% of buyers cite it first), ahead of convenience (30%) and creator recommendation (19%). Price is the decisive factor for 58% of buyers, 3 points below the panel average of 61%. The main barriers reported in open answers are stigma around skincare and confusing product choice.
 
 ## Values: sustainability, dupes and loyalty
 
-26% of buyers say they would pay more for a sustainable option (in line with the panel average of 25%). 27% bought a dupe or lookalike product in the last year (9 points above the panel average of 17%), and 47% usually repurchase the same brand (8 points above the panel average of 39%).
+24% of buyers say they would pay more for a sustainable option (in line with the panel average of 26%). 27% bought a dupe or lookalike product in the last year (10 points above the panel average of 17%), and 46% usually repurchase the same brand (8 points above the panel average of 39%).
+
+## Products Gen Z buys
+
+Among men's grooming buyers, the most common product type is Oil-control moisturiser (39% of buyers). Oil-control moisturiser over-indexes with 16-19 year-olds (29% of its buyers), while Beard oil skews older (43% aged 25-29).
+
+- **Oil-control moisturiser**: 39% of category buyers, typical price €14, interest rising, mostly bought via Physical store.
+- **Beard oil**: 30% of category buyers, typical price €15, interest stable, mostly bought via Physical store.
+- **Electric trimmer**: 30% of category buyers, typical price €45, interest stable, mostly bought via Physical store.
 
 ## Trends to watch
 

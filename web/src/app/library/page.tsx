@@ -5,10 +5,12 @@ import { FileText, Search } from "lucide-react";
 import { api, type DocSummary } from "@/lib/api";
 import { DocReader, docTypeLabel } from "@/components/doc-reader";
 import { Chip, ErrorState, PageHeader, Skeleton } from "@/components/ui";
+import { useLang } from "@/lib/i18n";
 
 const TYPES = ["all", "category_report", "sector_report", "thematic_report", "methodology"];
 
 export default function LibraryPage() {
+  const fr = useLang().lang === "fr";
   const [docs, setDocs] = useState<DocSummary[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [type, setType] = useState("all");
@@ -27,8 +29,10 @@ export default function LibraryPage() {
 
   return (
     <div className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8">
-      <PageHeader eyebrow="Corpus" title="Research library">
-        Every document the analyst can cite. Reports are chunked by section, embedded, and indexed for hybrid search. Add your own PDFs or Markdown with the ingestion CLI.
+      <PageHeader eyebrow="Corpus" title={fr ? "Bibliothèque d'études" : "Research library"}>
+        {fr
+          ? "Tous les documents que l'analyste peut citer (en anglais). Les rapports sont découpés par section, vectorisés et indexés pour la recherche hybride. Ajoutez vos PDF ou fichiers Markdown avec l'outil d'import."
+          : "Every document the analyst can cite. Reports are chunked by section, embedded, and indexed for hybrid search. Add your own PDFs or Markdown with the ingestion CLI."}
       </PageHeader>
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div className="scroll-thin flex gap-1.5 overflow-x-auto pb-1">

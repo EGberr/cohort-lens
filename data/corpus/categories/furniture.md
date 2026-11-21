@@ -18,33 +18,41 @@ synthetic: true
 
 ## Executive summary
 
-Furniture reached 26% of Gen Z consumers over the last twelve months, spending an average of €26 per month. The category is in decline (-4.8% spend vs the 2025 wave). Frequent moves make Gen Z cautious furniture buyers; secondhand marketplaces and modular pieces win over long-term investment furniture.
+Furniture reached 27% of Gen Z consumers over the last twelve months, spending an average of €25 per month. The category is in decline (-4.8% spend vs the 2025 wave). Frequent moves make Gen Z cautious furniture buyers; secondhand marketplaces and modular pieces win over long-term investment furniture.
 
 ## Market snapshot
 
-- Penetration (bought in last 12 months): 26%
-- Average monthly spend among buyers: €26
-- Annualised spend per Gen Z consumer: €80
+- Penetration (bought in last 12 months): 27%
+- Average monthly spend among buyers: €25
+- Annualised spend per Gen Z consumer: €81
 - Spend growth vs 2025 wave: -4.8%
-- Buyers in panel: 1,546 of 6,000 respondents
+- Buyers in panel: 1,596 of 6,000 respondents
 
 ## Who buys
 
-The category skews towards women: 28% of women bought versus 23% of men. It is an older-Gen Z category: penetration rises from 18% among 16-19 year-olds to 32% among 25-29 year-olds. By market, penetration is highest in Spain (30%) and lowest in Italy (22%). Buyers in the US spend the most (€31 per month). Among high-income respondents penetration reaches 34%, compared with 21% in the low-income band.
+Purchase is balanced by gender (women 28%, men 25%). It is an older-Gen Z category: penetration rises from 19% among 16-19 year-olds to 33% among 25-29 year-olds. By market, penetration is highest in France (33%) and lowest in the US (20%). Buyers in the US spend the most (€32 per month). Among high-income respondents penetration reaches 34%, compared with 22% in the low-income band.
 
 ## Path to purchase
 
-Discovery is led by In store (25% of buyers), followed by TikTok (24%) and Instagram (20%). TikTok accounts for 26% of first discoveries among 16-19 year-olds versus 23% among 25-29 year-olds, while search engines matter more for the older group (17% vs 16%).
+Discovery is led by In store (26% of buyers), followed by Instagram (21%) and TikTok (21%). TikTok accounts for 24% of first discoveries among 16-19 year-olds versus 21% among 25-29 year-olds, while search engines matter more for the older group (20% vs 13%).
 
-The main purchase channel is Physical store (37%), then Marketplaces (Amazon, Zalando...) (26%) and Resale apps (Vinted, Depop...) (22%).
+The main purchase channel is Physical store (36%), then Online marketplaces (28%) and Resale apps (Vinted, Depop...) (21%).
 
 ## Purchase drivers and barriers
 
-The top purchase driver is price / value for money (41% of buyers cite it first), ahead of aesthetics & self-expression (29%) and quality & durability (18%). Price is the decisive factor for 70% of buyers, 8 points above the panel average of 61%. The main barriers reported in open answers are moving often and delivery costs.
+The top purchase driver is price / value for money (41% of buyers cite it first), ahead of aesthetics & self-expression (28%) and quality & durability (20%). Price is the decisive factor for 74% of buyers, 12 points above the panel average of 61%. The main barriers reported in open answers are moving often and delivery costs.
 
 ## Values: sustainability, dupes and loyalty
 
-33% of buyers say they would pay more for a sustainable option (7 points above the panel average of 25%). 16% bought a dupe or lookalike product in the last year (in line with the panel average of 17%), and 24% usually repurchase the same brand (15 points below the panel average of 39%).
+32% of buyers say they would pay more for a sustainable option (6 points above the panel average of 26%). 17% bought a dupe or lookalike product in the last year (in line with the panel average of 17%), and 21% usually repurchase the same brand (17 points below the panel average of 39%).
+
+## Products Gen Z buys
+
+Among furniture buyers, the most common product type is Modular shelving (35% of buyers). Second-hand armchair over-indexes with 16-19 year-olds (21% of its buyers), while Second-hand armchair skews older (45% aged 25-29).
+
+- **Modular shelving**: 35% of category buyers, typical price €80, interest rising, mostly bought via Physical store.
+- **Home-office desk**: 35% of category buyers, typical price €150, interest stable, mostly bought via Physical store.
+- **Second-hand armchair**: 30% of category buyers, typical price €90, interest rising, mostly bought via Physical store.
 
 ## Trends to watch
 
@@ -56,6 +64,6 @@ The top purchase driver is price / value for money (41% of buyers cite it first)
 
 Offer modular, movable designs and buy-back programmes; local resale is a key competitor.
 
-- Prioritise In store for awareness: it is the first discovery source for 25% of buyers.
+- Prioritise In store for awareness: it is the first discovery source for 26% of buyers.
 - Build the offer around price / value for money, the most-cited driver.
-- Plan conversion on Physical store, which carries 37% of purchases.
+- Plan conversion on Physical store, which carries 36% of purchases.

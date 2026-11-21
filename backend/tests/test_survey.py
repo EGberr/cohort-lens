@@ -39,3 +39,10 @@ def test_gender_skew_matches_spec(store):
 def test_invalid_queries_raise(store, kwargs):
     with pytest.raises(SurveyQueryError):
         store.query(**kwargs)
+
+
+def test_product_shares_sum_to_100(store):
+    for cat in ("skincare", "used-cars", "electric-vehicles"):
+        stats = store.product_stats(cat)
+        assert len(stats) == 3
+        assert abs(sum(p["share_of_category"] for p in stats) - 100) < 0.5

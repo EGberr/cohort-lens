@@ -7,6 +7,7 @@ import { cx } from "@/lib/format";
 import { BarList } from "@/components/charts";
 import { docTypeLabel } from "@/components/doc-reader";
 import { PageHeader, Panel, Skeleton } from "@/components/ui";
+import { useLang } from "@/lib/i18n";
 
 const MODE_LABEL: Record<string, string> = {
   bm25: "BM25",
@@ -103,6 +104,7 @@ function RetrievalLab() {
 }
 
 export default function LabPage() {
+  const fr = useLang().lang === "fr";
   const [report, setReport] = useState<EvalReport | null>(null);
   const [missing, setMissing] = useState(false);
 
@@ -115,8 +117,10 @@ export default function LabPage() {
 
   return (
     <div className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8">
-      <PageHeader eyebrow="Quality" title="Evals & retrieval lab">
-        Measured, not claimed. The retrieval benchmark uses {report?.retrieval.n_queries ?? 200} generated queries phrased with aliases and trend names; the answer benchmark checks every number against the panel and requires a dataset citation.
+      <PageHeader eyebrow={fr ? "Qualité" : "Quality"} title={fr ? "Évaluations & labo de recherche" : "Evals & retrieval lab"}>
+        {fr
+          ? `Mesuré, pas affirmé. Le benchmark de recherche utilise ${report?.retrieval.n_queries ?? 208} requêtes générées avec des synonymes et des tendances ; le benchmark de réponses vérifie chaque chiffre contre le panel et exige une citation.`
+          : `Measured, not claimed. The retrieval benchmark uses ${report?.retrieval.n_queries ?? 208} generated queries phrased with aliases and trend names; the answer benchmark checks every number against the panel and requires a dataset citation.`}
       </PageHeader>
 
       {missing && (
