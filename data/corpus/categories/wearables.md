@@ -12,7 +12,7 @@ synthetic: true
 
 # Wearables: Gen Z Category Report 2026
 
-> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Cohort Lens. Figures come from a simulated panel and must not be used for real decisions.
+> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Zentrend. Figures come from a simulated panel and must not be used for real decisions.
 
 *Also covers: smartwatch, fitness tracker, smart ring, wearable tech. Sector: Tech & Electronics.*
 

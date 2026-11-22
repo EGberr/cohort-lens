@@ -10,7 +10,7 @@ synthetic: true
 
 # Panel Methodology
 
-> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Cohort Lens. Figures come from a simulated panel and must not be used for real decisions.
+> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Zentrend. Figures come from a simulated panel and must not be used for real decisions.
 
 ## Sample
 
@@ -30,4 +30,4 @@ For each of 50 product categories, respondents reported whether they bought in t
 
 ## Limitations
 
-This panel is simulated. Distributions were calibrated by hand to be plausible, and segments differ according to documented assumptions (age, gender, income and country effects). It demonstrates the Cohort Lens platform and is not market evidence.
+This panel is simulated. Distributions were calibrated by hand to be plausible, and segments differ according to documented assumptions (age, gender, income and country effects). It demonstrates the Zentrend platform and is not market evidence.

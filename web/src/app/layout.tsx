@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const serif = Instrument_Serif({ variable: "--font-serif", subsets: ["latin"], weight: "400", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
-  title: "Cohort Lens — Gen Z consumer intelligence",
+  title: "Zentrend — Gen Z consumer intelligence",
   description: "Browse what Gen Z buys across 52 categories and ask the studies: an agentic RAG analyst grounded in research reports and a survey panel.",
 };
 

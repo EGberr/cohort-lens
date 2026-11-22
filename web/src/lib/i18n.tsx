@@ -311,7 +311,7 @@ type Ctx = {
   pick: <T extends Record<string, unknown>>(obj: T, field: string) => string;
 };
 
-const STORAGE_KEY = "cohort-lens-lang";
+const STORAGE_KEY = "zentrend-lang";
 
 // Language preference as an external store: the server (and hydration) always render English,
 // then React switches to the stored/browser language without a hydration mismatch.

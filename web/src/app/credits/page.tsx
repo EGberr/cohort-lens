@@ -18,7 +18,7 @@ export default function CreditsPage() {
   }, []);
   return (
     <div className="mx-auto max-w-[1320px] px-5 py-10 sm:px-8">
-      <PageHeader eyebrow="Cohort Lens" title={t("misc.credits_title")}>
+      <PageHeader eyebrow="Zentrend" title={t("misc.credits_title")}>
         {t("misc.credits_sub")}
       </PageHeader>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

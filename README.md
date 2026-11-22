@@ -1,6 +1,6 @@
 <div align="center">
 
-# Cohort Lens
+# Zentrend
 
 **Browse what Gen Z buys. Ask the studies why.**
 A storefront-style research platform over 52 product categories (beauty to cars) and 156 product types, with an agentic RAG analyst that answers from 67 research reports and a 6,000-respondent panel, every number cited to its source. English and French.
@@ -17,7 +17,7 @@ Claude Opus 5.5 · FastAPI · DuckDB · Hybrid retrieval (BM25 + embeddings + cr
 
 Marketing teams sit on stacks of market studies and survey data, yet simple questions still need an analyst: *"Where do 16-19 year-olds discover skincare, and how is that different for 25-29?"* Plain RAG over PDFs is not enough here. It paraphrases numbers, mixes up segments and gives no way to check an answer.
 
-Cohort Lens treats the two kinds of evidence differently:
+Zentrend treats the two kinds of evidence differently:
 
 | Evidence | Tool | Why |
 |---|---|---|

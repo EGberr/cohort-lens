@@ -1,4 +1,4 @@
-"""Runtime configuration (environment variables prefixed with COHORT_)."""
+"""Runtime configuration (environment variables prefixed with ZENTREND_)."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="COHORT_", env_file=ROOT / ".env", extra="ignore")
+    model_config = SettingsConfigDict(env_prefix="ZENTREND_", env_file=ROOT / ".env", extra="ignore")
 
     data_dir: Path = ROOT / "data"
     model: str = "claude-opus-5-5"

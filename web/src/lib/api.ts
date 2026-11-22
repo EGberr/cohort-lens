@@ -1,4 +1,4 @@
-// Typed client for the Cohort Lens FastAPI backend (proxied under /api by next.config.ts).
+// Typed client for the Zentrend FastAPI backend (proxied under /api by next.config.ts).
 
 export type Health = {
   status: string;

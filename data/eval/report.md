@@ -1,4 +1,4 @@
-# Cohort Lens evaluation — 2026-11-21
+# Zentrend evaluation — 2026-11-21
 
 Corpus: 67 documents, 527 chunks.
 

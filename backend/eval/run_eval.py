@@ -1,4 +1,4 @@
-"""Cohort Lens evaluation harness.
+"""Zentrend evaluation harness.
 
 1. Retrieval: ~200 generated queries with gold documents/sections, written with category
    *aliases* and trend names rather than category names, so lexical overlap is limited.
@@ -176,7 +176,7 @@ async def evaluate_answers(toolbox: Toolbox, store: SurveyStore, n: int) -> dict
 
 def to_markdown(report: dict) -> str:
     lines = [
-        f"# Cohort Lens evaluation — {report['generated_at'][:10]}",
+        f"# Zentrend evaluation — {report['generated_at'][:10]}",
         "",
         f"Corpus: {report['corpus']['documents']} documents, {report['corpus']['chunks']} chunks.",
         "",

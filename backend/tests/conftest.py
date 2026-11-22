@@ -1,6 +1,6 @@
 import os
 
-os.environ.setdefault("COHORT_OFFLINE", "true")  # tests never call the real API
+os.environ.setdefault("ZENTREND_OFFLINE", "true")  # tests never call the real API
 
 import pytest
 

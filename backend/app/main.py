@@ -1,4 +1,4 @@
-"""Cohort Lens HTTP API (FastAPI). Run: `uv run uvicorn app.main:app --reload --port 8000`."""
+"""Zentrend HTTP API (FastAPI). Run: `uv run uvicorn app.main:app --reload --port 8000`."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ from app.survey import DIMENSIONS, METRICS, get_store
 from app.tools import Toolbox
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-log = logging.getLogger("cohort_lens")
+log = logging.getLogger("zentrend")
 
 
 @asynccontextmanager
@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Cohort Lens API", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="Zentrend API", version="1.0.0", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_methods=["*"], allow_headers=["*"])
 
 

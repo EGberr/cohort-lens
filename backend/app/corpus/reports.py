@@ -22,7 +22,7 @@ WAVE = "Gen Z Consumer Panel, Wave 2026"
 DATE = "2026-09-15"
 DISCLAIMER = (
     "> **Synthetic data notice.** This report is part of a fictional demo corpus generated for "
-    "Cohort Lens. Figures come from a simulated panel and must not be used for real decisions."
+    "Zentrend. Figures come from a simulated panel and must not be used for real decisions."
 )
 COUNTRY_NAMES = {"FR": "France", "UK": "the UK", "DE": "Germany", "ES": "Spain", "IT": "Italy", "US": "the US"}
 
@@ -514,7 +514,7 @@ class CorpusBuilder:
                     "## Limitations",
                     "This panel is simulated. Distributions were calibrated by hand to be plausible, and segments differ "
                     "according to documented assumptions (age, gender, income and country effects). It demonstrates the "
-                    "Cohort Lens platform and is not market evidence.",
+                    "Zentrend platform and is not market evidence.",
                 ]
             )
             + "\n"

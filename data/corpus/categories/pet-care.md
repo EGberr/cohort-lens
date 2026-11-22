@@ -12,7 +12,7 @@ synthetic: true
 
 # Pet Care: Gen Z Category Report 2026
 
-> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Cohort Lens. Figures come from a simulated panel and must not be used for real decisions.
+> **Synthetic data notice.** This report is part of a fictional demo corpus generated for Zentrend. Figures come from a simulated panel and must not be used for real decisions.
 
 *Also covers: pet food, pet products, dog accessories, cat food. Sector: Money & Services.*
 

@@ -25,7 +25,7 @@ export function Logo() {
         <circle cx="19" cy="16" r="10" fill="var(--accent)" fillOpacity="0.9" />
         <circle cx="19" cy="16" r="10" fill="none" stroke="currentColor" strokeWidth="2.4" />
       </svg>
-      <span className="text-[15px] font-semibold tracking-tight">Cohort Lens</span>
+      <span className="text-[15px] font-semibold tracking-tight">Zentrend</span>
     </span>
   );
 }
@@ -75,7 +75,7 @@ export function TopNav() {
   return (
     <header className="sticky top-0 z-40 border-b hairline bg-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-6 px-5 sm:px-8">
-        <Link href="/" aria-label="Cohort Lens home" onClick={() => setOpen(false)}>
+        <Link href="/" aria-label="Zentrend home" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">
@@ -131,7 +131,7 @@ export function Footer() {
           <Link href="/credits" className="hover:text-ink">
             {t("footer.credits")}
           </Link>
-          <a href="https://github.com/EGberr/cohort-lens" target="_blank" rel="noreferrer" className="hover:text-ink">
+          <a href="https://github.com/EGberr/zentrend" target="_blank" rel="noreferrer" className="hover:text-ink">
             GitHub
           </a>
         </div>

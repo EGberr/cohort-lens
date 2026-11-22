@@ -1,7 +1,7 @@
 [project]
-name = "cohort-lens-backend"
+name = "zentrend-backend"
 version = "0.1.0"
-description = "Cohort Lens backend: agentic RAG over Gen Z consumer research"
+description = "Zentrend backend: agentic RAG over Gen Z consumer research"
 authors = [
     { name = "EGberr", email = "157116288+EGberr@users.noreply.github.com" }
 ]
